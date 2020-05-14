@@ -9,6 +9,6 @@ theme:
         - JavaScript
         - TypeScript
 plugins:
-  - search
+  - search 
 markdown_extensions:
     - smarty
