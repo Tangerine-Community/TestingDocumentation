@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Debugging reporting - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Debugging reporting";
+    var mkdocs_page_input_path = "developer/debugging-reporting.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Debugging reporting</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developer &raquo;</li>
+        
+      
+    
+    <li>Debugging reporting</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/developer/debugging-reporting.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="debugging-the-reporting-cache-process">Debugging the Reporting Cache process</h2>
+<p>Configure your project to use the CSV and Logstash modules:</p>
+<pre><code>T_MODULES=&quot;['csv', 'logstash']&quot;
+</code></pre>
+
+<p>Start the development environment&hellip;</p>
+<pre><code>./develop.sh
+</code></pre>
+
+<p>Create a group called <code>foo</code> in the GUI. Then open <code>./server/src/app.service.ts</code> and comment out the call to <code>this.keepAliveReportingWorker()</code>. </p>
+<p>&ldquo;exec&rdquo; into the container and note how <code>foo</code> has been added to the <code>/reporting-worker-state.json</code> file.</p>
+<pre><code>docker exec -it tangerine bash
+cat /reporting-worker-state.json
+</code></pre>
+
+<p>Seed the <code>foo</code> group with 100 form responses.</p>
+<pre><code>docker exec tangerine generate-uploads 100 foo
+</code></pre>
+
+<p>In Chrome, go to <code>chrome://inspect</code>, click <code>Configure...</code>, and add <code>127.0.0.1:9228</code> as an entry in &ldquo;Target discovery settings&rdquo;.</p>
+<p>//@TODO OUTDATED but still relevant
+Now manually trigger a batch. After the command finishes, verify the batch by checking <code>http://localhost:5984/_utils/#database/foo-reporting/_all_docs</code>.</p>
+<pre><code>node --inspect-brk=0.0.0.0:9228 $(which reporting-worker-batch)
+</code></pre>
+
+<p>There will be only 15 docs in your reporting db because that is the batch size.</p>
+<p>Although Tangerine in develop.sh mode runs node in a debugger process, you must launch a separate node process to debug the batch reporting worker.</p>
+<p>If no errors occurred, copy the temporary state to the current state.</p>
+<pre><code>cp /reporting-worker-state.json_tmp /reporting-worker-state.json
+</code></pre>
+
+<p>Keep repeating to continue processing&hellip;</p>
+<pre><code>cat /reporting-worker-state.json | node /tangerine/server/reporting/run-worker.js | tee /reporting-worker-state.json_tmp
+cp /reporting-worker-state.json_tmp /reporting-worker-state.json
+</code></pre>
+
+<p>If you would like to debug, add the <code>--inspect-brk=0.0.0.0:9227</code> option to the <code>run-worker.js</code> command.</p>
+<pre><code>cat /reporting-worker-state.json | node --inspect-brk=0.0.0.0:9227 /tangerine/server/src/scripts/reporting-worker-batch.js | tee /reporting-worker-state.json_tmp
+</code></pre>
+
+<p>When you run that command, it will wait on the first line of the script for a debugger to connect to it. In Chrome, go to <code>chrome://inspect</code>, click <code>Configure...</code>, and add <code>127.0.0.1:9227</code> as an entry in &ldquo;Target discovery settings&rdquo;. Now back to the <code>chrome://inspect</code> page and you will find under the <code>Remote Target #127.0.0.1</code> group, a new target has been discovered called <code>/tangerine/server/reporting/run-worker.js</code>. Click <code>inspect</code> and now you should be able to set breakpoints and walk through the code. You may not be able to set breakpoints in all files so use &ldquo;step into&rdquo; and the <code>debugger</code> keyword to get the debugger to the focus you want.</p>
+<p>If you want to keep the cache worker running, use watch.</p>
+<pre><code>watch -n 1 &quot;cat /reporting-worker-state.json | node /tangerine/server/reporting/run-worker.js | tee /.reporting-worker-state.json | json_pp &amp;&amp; cp /.reporting-worker-state.json /reporting-worker-state.json&quot;
+</code></pre>
+
+<p>If you need to clear a reporting cache, don&rsquo;t simply delete the reporting db. Use</p>
+<pre><code>reporting-cache-clear
+
+</code></pre>
+
+<p>You typically need to remove the semaphore before running reporting-cache-clear, especially if there was a crash</p>
+<pre><code>rm /reporting-worker-running
+
+</code></pre>
+
+<h2 id="a-typical-report-debugging-workflow">A typical report debugging workflow:</h2>
+<p>Remember to setup config.sh properly! (Make sure  T_MODULES=&rdquo;[&lsquo;csv&rsquo;,&rsquo;logstash&rsquo;]&rdquo;)
+Comment out keepAliveReportingWorker in /server/src/app.service.ts.
+Remember to add <code>127.0.0.1:9228</code> as an entry in &ldquo;Target discovery settings&rdquo; in chrome://inspect/#devices</p>
+<p>You may need to add <code>debugger</code> before the line of code you wish to debug. </p>
+<p>docker exec into your container</p>
+<pre><code>docker exec -it tangerine bash
+</code></pre>
+
+<p>Then you&rsquo;ll typically need to rm the reporting-worker-running - it keeps reporting-cache-clear from running if a previous debug session crashed.</p>
+<pre><code>rm /reporting-worker-running
+reporting-cache-clear
+node --inspect-brk=0.0.0.0:9228 $(which reporting-worker-batch)
+</code></pre>
+
+<p>Switch back to Chrome, open <code>chrome://inspect</code>. The debugger will be the session that looks like this:</p>
+<pre><code>Target
+/usr/local/bin/reporting-worker-batch file:///tangerine/server/src/scripts/reporting-worker-batch.js
+Inspect
+</code></pre>
+
+<p>When it launches, it will wait on the first line of the script for a debugger to connect to it. Click F8 to run. 
+If all is right and good in this world, it will stop at your debugger statement.
+When the batch has completed, your debugger window will close.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../debugging_node_apps/" class="btn btn-neutral float-right" title="Debugging node apps">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../cordova-plugin-development/" class="btn btn-neutral" title="Cordova plugin development"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../cordova-plugin-development/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../debugging_node_apps/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

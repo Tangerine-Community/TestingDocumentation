@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Using Tangerine outside of the box - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using Tangerine outside of the box";
+    var mkdocs_page_input_path = "user-guide/usingTangerine.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Using Tangerine outside of the box</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#timed-observations">Timed observations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timed-user-assessment">Timed user assessment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#self-evaluation-for-students">Self evaluation for students</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anonymous-questionnaire-reading-out-loud-response-options-and-questions">Anonymous questionnaire reading out loud response options and questions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bundling-content">Bundling content</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ef-touch-tasks">EF Touch tasks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#classroom-observation">Classroom Observation</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User guide &raquo;</li>
+        
+      
+    
+    <li>Using Tangerine outside of the box</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/user-guide/usingTangerine.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-tangerine-outside-of-the-box">Using Tangerine outside of the box</h1>
+<p>Here you will see how you can use Tangerine beyond EGRA/EGMA assessments or sruvey. </p>
+<h2 id="timed-observations">Timed observations</h2>
+<hr />
+<p>It maybe the case where you would like to observe what is happening in the classroom every 5 mins and answer a series of questions during this time. Once the timer runs out the next observation interval starts. This scenario is doable out of the box with Tangerine.</p>
+<p>Here are the steps to follow to implement a timed interval observation:</p>
+<ul>
+<li>
+<p>Create the start page(s) - here you can collect the begin time, the gps coordinates, the location input, or anything else that pertains to the observation.</p>
+</li>
+<li>
+<p>Create the questions you want to answer each X seconds/minutes. Make sure they are all optional (not required).</p>
+</li>
+<li>Insert an EF Touch input which will control the time limit.</li>
+<li>Insert a question to control if the observation should terminate early.</li>
+<li>In our example we have also inserted a JS script to show the count down to the user.</li>
+<li>Create a last page to collect comments.</li>
+</ul>
+<p>The codepen code below contains a live version running as an example. You can copy the code from there and paste it into your form. To view the code click Change View and select Editor view.
+https://codepen.io/lachko/full/BaoZxqv </p>
+<h2 id="timed-user-assessment">Timed user assessment</h2>
+<hr />
+<p>Add a timed user assessment</p>
+<h2 id="self-evaluation-for-students">Self evaluation for students</h2>
+<hr />
+<p>Student self evaluation. ACASI, timed, take photo of work, dictation, listening comprehension, random tasks</p>
+<h2 id="anonymous-questionnaire-reading-out-loud-response-options-and-questions">Anonymous questionnaire reading out loud response options and questions</h2>
+<p>Here is a sample self conducted questionnaire. Here the student sits down with headphones and the tablet answering each survey question. </p>
+<p>https://codepen.io/lachko/full/vYNJKrL</p>
+<h2 id="bundling-content">Bundling content</h2>
+<hr />
+<h2 id="ef-touch-tasks">EF Touch tasks</h2>
+<hr />
+<p>An executive function task example, where the pupil is asked to click the dot corresponding to the arrow direction.</p>
+<p>https://codepen.io/lachko/full/KKdqerW </p>
+<h2 id="classroom-observation">Classroom Observation</h2>
+<hr />
+<p>https://codepen.io/lachko/pen/JjYJmLZ</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../validation/" class="btn btn-neutral float-right" title="Validation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../userGuide/" class="btn btn-neutral" title="userGuide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../userGuide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../validation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

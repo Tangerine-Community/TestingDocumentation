@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>hackingTangerine - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "hackingTangerine";
+    var mkdocs_page_input_path = "user-guide/hackingTangerine.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">hackingTangerine</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User guide &raquo;</li>
+        
+      
+    
+    <li>hackingTangerine</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/user-guide/hackingTangerine.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>In this appendix we will show you how to do certain things that require
+more technical knowledge or experience with Tangerine</p>
+<h2 id="adding-an-auto-generated-id">Adding an auto-generated ID</h2>
+<p>An autogenerated student or teacher ID is something that you may need to
+add to each one of your instruments. In the example here I will show you
+how to add an ID field that is already populated upon opening the page.
+Here are the steps to set this up:</p>
+<ol>
+<li>
+<p>Create an input field of type TEXT and type in &lsquo;student_id&rsquo; as its
+    name. Mark this field as required and click save.</p>
+</li>
+<li>
+<p>Copy and paste the code that I have before into the on-open section
+    logic</p>
+</li>
+</ol>
+<p>Go the section where you&rsquo;d like to add a student id. This new field
+doesn&rsquo;t have to be in a separate section and can be part of the Student
+Information page.</p>
+<p>Click the Insert Here button, to add a new input, and select TEXT under
+the first Inputs column.</p>
+<p>On the next page under name type in <em>student_id</em></p>
+<p><img src="./media/image98.png" width="570"></p>
+<p>Add a label and any other information you&rsquo;d like for this field and save
+it.</p>
+<p>Now click the Edit icon on the top left of the section header</p>
+<p>Click the &lsquo;on-open&rsquo; text link to edit it and paste the below code inside
+the field:</p>
+<blockquote>
+<p><em>function makeid() {</em></p>
+<p><em>var text = '';</em></p>
+<p><em>var possible =
+'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz0123456789';</em></p>
+<p><em>//change 6 to the desired length of the ID</em></p>
+<p><em>for (var i = 0; i \&lt;= 6; i++)</em></p>
+<p><em>text += possible.charAt(Math.floor(Math.random() *
+possible.length));</em></p>
+<p><em>return text;</em></p>
+<p><em>}</em></p>
+<p><em>//If your variable is not called student_id change it in both
+occurances below</em></p>
+<p><em>if (inputs.student_id.value == '')</em></p>
+<p><em>inputs.student_id.value = makeid()</em></p>
+</blockquote>
+<p>You should see something like this on your screens</p>
+<p><img src="./media/image99.png" width="570"></p>
+<p>Click the Submit button to save the change. If you deploy this form now
+you will see that upon opening this section the ID is generated and
+already inserted into the student_id variable.</p>
+<p>You can use this file to help you generated the code that you need:
+<a href="http://bit.ly/2JBk2P3">http://bit.ly/2JBk2P3</a></p>
+<h2 id="changing-the-label-of-an-input">Changing the label of an input</h2>
+<p>In some situations, you may wish to change the label of an input as to
+give different instruction or to add a variable name to it (like some
+calculation or the result of a previous selection). You can easily do
+this by following the below steps</p>
+<ol>
+<li>
+<p>Add the question that you wish to change</p>
+</li>
+<li>
+<p>Add code and/or calculations to change the label in the on-open
+    event of a section</p>
+</li>
+</ol>
+<p>Let&rsquo;s first add question with variable name Q_10. Now, let&rsquo;s assume
+that you want to change the label for this question based on some
+calculation, and we want to add the result of the calculation to the
+label. Go to the on-open event on the section containing Q_10. Add the
+below code and click Submit:</p>
+<blockquote>
+<p>var calc =
+getValue('teachers_present')/getValue('teachers_enrolled')</p>
+<p>inputs.Q_10.label = 'The teacher ratio is#' + calc + ' Please
+keep this in mind when answering the below question.'</p>
+</blockquote>
+<p>What am I doing above? First I calculate some ration of teachers present
+vs teacher enrolled, which I&rsquo;ve collected on a previous form. Then I
+make this ratio part of the label for questions Q_10.</p>
+<p>If you&rsquo;d like to only assign a certain label without calculating
+anything you can do this:</p>
+<blockquote>
+<p>inputs.Q_10.label = 'Previously you responded that there are #' +
+getValue('teachers_present') + ' teachers present. How many of
+them were prepared for class?'</p>
+</blockquote>
+<h2 id="filter-the-location-list-based-on-the-user-profiles-location">Filter the location list based on the user profile&rsquo;s location</h2>
+<p>Let&rsquo;s assume that you have a location list with levels Region, District,
+and School. Now let&rsquo;s also assume that on the user profile page, you
+have added a location input with levels Region and District. You have
+also asked each assessor to select their district on the user profile
+page, after they have logged in.</p>
+<p>Your user profile page looks like so:</p>
+<p><img src="./media/image100.png" width="570"></p>
+<p>Note above how the levels defined for this location input are Region and
+District. On the actual assessment form your location levels include the
+full hierarchy, for example, Region, District, and School. There is one
+more option that I want to check here which is &ldquo;Filter by locations in
+the user profile&rdquo; In the assessment form make sure that your data is
+like the example below:</p>
+<p><img src="./media/image101.png" width="570"></p>
+<p>What will enabling the filter on the assessment form do? It will display
+only the district that this user has selected under their user profile.
+This makes the selection of a school much easier in a list with a lot of
+regions and districts. Let&rsquo;s see how it works on the tablet.</p>
+<p>When filling in my user profile I will select the &lsquo;Kilolo DC&rsquo; district</p>
+<p><img src="./media/image102.png" width="570"></p>
+<p>Now every time start a form containing a location input in it, I will
+only see the district that I selected on the user profile and no other
+regions or districts will be given to me for selection. By doing this,
+you ensure that the assessor will never select a school with the same
+name form a different district or make a selection that doesn&rsquo;t
+correspond to their actual location.</p>
+<p><img src="./media/image103.png" width="570"></p>
+<p>Note how in the above screenshot, there is only one district showing up.
+Under the region selection we also see only the region that the Kilolo
+DC district belongs to.</p>
+<h1 id="appendix-b">Appendix B</h1>
+<p>In this appendix we will link some video tutorials and helper files that
+you can use to have a live example on how to do certain things with
+Tangerine</p>
+<h2 id="how-to-create-new-users-and-add-them-to-a-group">How to create new users and add them to a group</h2>
+<p>See how to create a user and add them to a group.</p>
+<p><a href="https://youtu.be/_gYGC2_J2EU">https://youtu.be/_gYGC2_J2EU</a></p>
+<h2 id="importing-a-location-list">Importing a location list</h2>
+<p>Make sure that the column names in your Excel exactly match the levels
+define in Tangerine (Including any capital letters)</p>
+<p>The part about importing metadata for your location is optional. You do
+not have to define metadata if such is not used in your scenario</p>
+<p><a href="https://youtu.be/RSJmNu7ef3U">https://youtu.be/RSJmNu7ef3U</a></p>
+<h2 id="location-list-sample-file-with-ids">Location list sample file with IDs</h2>
+<p>In this file you will find out a sample location list with the IDs
+generated by Excel. You can use the formula for generating the Ids if
+your file does not contain such.</p>
+<p><a href="http://bit.ly/2WzcTnB">http://bit.ly/2WzcTnB</a></p>
+<h2 id="defining-a-meta-data-template-to-present-to-the-user-upon-selection">Defining a meta data template to present to the user upon selection</h2>
+<p>If you do decide to use metadata, you need the part below in order to
+display some/all of it to the data assessor. If you are not displaying
+this information to the tablet user it will still end up in your CSV
+file.</p>
+<p><a href="https://youtu.be/M83zFwtR-4A">https://youtu.be/M83zFwtR-4A</a></p>
+<p>Adapt the line below to fit yoru metadata and level information so that
+this is printed to the assessor</p>
+<p>\${node.level === '<strong>LEVEL_VARIABLE</strong>' ?` EMIS:
+\${node.<strong>META_DATA_VARIABLE</strong>}`:''}</p>
+<p>Replace the bold text with your corresponding level and meta data
+variable. Make sure you enable the metadata for the location input and
+paste this code as content.</p>
+<h2 id="add-an-other-specify-field-for-a-location-list">Add an &lsquo;Other, specify&rsquo; field for a location list</h2>
+<p>In this video we show you how you can add an &lsquo;Other&rsquo; field for a
+location list. To help you generate the code we also use another helper
+file for this.</p>
+<p><a href="https://youtu.be/obTQusAKeRM">https://youtu.be/obTQusAKeRM</a></p>
+<p>The helper file to generate the necessary code is located at
+<a href="http://bit.ly/2DLy3Xa">http://bit.ly/2DLy3Xa</a></p>
+<h2 id="generate-an-autogenerated-id-field">Generate an Autogenerated ID field</h2>
+<p>This helper file will help you generated the code for your autogenerated
+ID</p>
+<p><a href="http://bit.ly/2JBk2P3">http://bit.ly/2JBk2P3</a></p>
+<h2 id="automatically-fill-in-the-date-and-time-fields-in-a-section-with-the-current-date">Automatically fill in the date and time fields in a section with the current date</h2>
+<p>This helper file will help you generate the code required to
+automatically fill in the date and time fields located in the same
+section with the current date and time on the tablet. Hint: to prevent
+the user from changing these values you can mark the inputs as Disabled</p>
+<p><a href="http://bit.ly/2PSJbZC">http://bit.ly/2PSJbZC</a></p>
+<h2 id="add-a-two-variable-tablet-report">Add a two variable tablet report</h2>
+<p>You can make use of the helper file located at <a href="http://bit.ly/2Yi8PsF">http://bit.ly/2Yi8PsF</a>
+to generate the code for a two variable tablet report like in the image
+below. This report shows you the count of occurrence of the two
+variables per day</p>
+<p>Refer to the instructional video at <a href="https://youtu.be/ne5pZkWvjKY">https://youtu.be/ne5pZkWvjKY</a></p>
+<p><img src="./media/image104.png" width="570"></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../inputTypes/" class="btn btn-neutral float-right" title="inputTypes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../groupMangement/" class="btn btn-neutral" title="groupMangement"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../groupMangement/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../inputTypes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

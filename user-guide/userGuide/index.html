@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>userGuide - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "userGuide";
+    var mkdocs_page_input_path = "user-guide/userGuide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">userGuide</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User guide &raquo;</li>
+        
+      
+    
+    <li>userGuide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/user-guide/userGuide.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><img alt="" src="../media/image1.png" />{width=&rdquo;4.836162510936133in&rdquo;
+height=&rdquo;3.1752580927384075in&rdquo;}</p>
+<p><strong>Creating and Editing Instruments in Tangerine: User Manual</strong></p>
+<p><strong>4 Dec 2019</strong></p>
+<h1 id="about-tangerinetm">About Tangerine^TM^</h1>
+<p>Tangerine is open source electronic data collection software designed
+for use on Android mobile devices. Its primary use is to enable
+recording of students&rsquo; responses in oral early grade reading and
+mathematics skills assessments. Tangerine is also used to capture
+interview responses from students, teachers, and principals; as well as
+in simple surveys and other data collections.</p>
+<p>Tangerine was developed by RTI International with funding from RTI and
+Google.org.</p>
+<p>For more information on Tangerine, visit
+<a href="http://www.tangerinecentral.org">http://www.tangerinecentral.org</a>.</p>
+<h1 id="about-this-manual">About this Manual</h1>
+<p>The procedures outlined in this document assume that the user has a
+valid Tangerine editor username and password and is able to login to
+their Tangerine instance on the web. If you do not have a Tangerine
+instance or have any questions about Tangerine, please contact
+support\@tangerinehelp.zendesk.com.</p>
+<p>This manual outlines the critical steps from creating an instrument in
+Tangerine to downloading the collected data for analysis. It provides
+tips and recommendations for instrument rendering in Tangerine and
+software use.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<p><a href="#about-tangerinetm">About Tangerine^TM^ 2</a></p>
+<p><a href="#about-this-manual">About this Manual 2</a></p>
+<p><a href="#table-of-contents">Table of Contents 3</a></p>
+<p><a href="#creating-a-new-group">1. Creating a New Group 5</a></p>
+<p><a href="#creating-a-new-instrumentform">2. Creating a New Instrument/Form 6</a></p>
+<p><a href="#editing-instrument-sections">3. Editing Instrument Sections 7</a></p>
+<p><a href="#adding-sections-to-an-instrumentform">Adding Sections to an Instrument/Form
+8</a></p>
+<p><a href="#section-editor">Section Editor 8</a></p>
+<p><a href="#copying-items">Copying Items 12</a></p>
+<p><a href="#item-editor">4. Item Editor 12</a></p>
+<p><a href="#gps-item">GPS Item 13</a></p>
+<p><a href="#location">LOCATION 15</a></p>
+<p><a href="#checkbox-group-checkbox-radio-buttons-or-dropdowns">CHECKBOX GROUP (Checkbox, Radio Buttons, or Dropdowns)
+18</a></p>
+<p><a href="#radio-buttons">RADIO BUTTONS 20</a></p>
+<p><a href="#dropdown">DROPDOWN 21</a></p>
+<p><a href="#timed-grid">TIMED GRID 21</a></p>
+<p><a href="#html-content-container">HTML CONTENT CONTAINER 23</a></p>
+<p><a href="#on-open-on-change-skip-logic-editor">5. On-Open / On-Change (Skip) Logic Editor
+25</a></p>
+<p><a href="#logic-at-instrumentform-level">Logic at instrument/form level 25</a></p>
+<p><a href="#logic-at-section-level">Logic at section level 25</a></p>
+<p><a href="#logic-at-item-level">Logic at item level 26</a></p>
+<p><a href="#on-open-and-on-change">On-open and on-change 26</a></p>
+<p><a href="#skip-logic-examples">(Skip) Logic Examples 26</a></p>
+<p><a href="#skip-logic-with-grid-specific-functions">Skip logic with grid specific functions
+28</a></p>
+<p><a href="#field-validation">6. Field Validation 29</a></p>
+<p><a href="#field-validation-examples">Field Validation Examples 29</a></p>
+<p><a href="#the-instrumentform-html-editor">7. The Instrument/Form HTML Editor 31</a></p>
+<p><a href="#deploying-tangerine-for-offline-or-online-data-collection">8. Deploying Tangerine for Offline (or Online) Data Collection
+32</a></p>
+<p><a href="#android-installation">Android Installation 33</a></p>
+<p><a href="#web-browser-installation">Web Browser Installation 33</a></p>
+<p><a href="#download-csv">9. Download CSV 35</a></p>
+<p><a href="#using-tangerine-on-the-mobile-device">10. Using Tangerine on the Mobile Device
+37</a></p>
+<p><a href="#registration-and-log-in">Registration and Log in 37</a></p>
+<p><a href="#administrating-instruments">Administrating Instruments 39</a></p>
+<p><a href="#resuming-instrument">Resuming Instrument 40</a></p>
+<p><a href="#syncing-data">Syncing Data 41</a></p>
+<p><a href="#appendix-a">Appendix A 43</a></p>
+<p><a href="#adding-an-auto-generated-id">Adding an auto-generated ID 43</a></p>
+<p><a href="#changing-the-label-of-an-input">Changing the label of an input 44</a></p>
+<p><a href="#filter-the-location-list-based-on-the-user-profiles-location">Filter the location list based on the user profile&rsquo;s location
+44</a></p>
+<p><a href="#appendix-b">Appendix B 47</a></p>
+<p><a href="#how-to-create-new-users-and-add-them-to-a-group">How to create new users and add them to a group
+47</a></p>
+<p><a href="#importing-a-location-list">Importing a location list 47</a></p>
+<p><a href="#location-list-sample-file-with-ids">Location list sample file with IDs
+47</a></p>
+<p><a href="#defining-a-meta-data-template-to-present-to-the-user-upon-selection">Defining a meta data template to present to the user upon selection
+47</a></p>
+<p><a href="#add-an-other-specify-field-for-a-location-list">Add an &lsquo;Other, specify&rsquo; field for a location list
+47</a></p>
+<p><a href="#generate-an-autogenerated-id-field">Generate an Autogenerated ID field
+47</a></p>
+<p><a href="#automatically-fill-in-the-date-and-time-fields-in-a-section-with-the-current-date">Automatically fill in the date and time fields in a section with the
+current date
+48</a></p>
+<p><a href="#add-a-two-variable-tablet-report">Add a two variable tablet report 48</a></p>
+<h1 id="creating-a-new-group">Creating a New Group</h1>
+<p>Upon logging into your Tangerine instance, you will see a screen listing
+your Tangerine groups and/or the opportunity to create new groups. You
+might think of groups as discrete data collection efforts that might
+contain several instruments or forms. If you have, e.g., a baseline data
+collection and an endline data collection for the same project, you
+might make these two different groups. When packaging your instruments
+into the apk (.apk is the application installation file format for
+Android devices) for installation on an Android device, Tangerine
+packages all instruments in a group. Thus, you should set up groups and
+categorize instruments accordingly.</p>
+<p>Click &ldquo;<strong>Create New Group</strong>&rdquo; in the screen below.</p>
+<p><img alt="" src="../media/image2.png" />{width=&rdquo;1.5853652668416447in&rdquo;
+height=&rdquo;0.5145833333333333in&rdquo;}<img alt="" src="../media/image3.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.9701388888888889in&rdquo;}</p>
+<p>Enter a name for your group: all lower case, no space, only letters.</p>
+<p><img alt="" src="../media/image4.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.379861111111111in&rdquo;}</p>
+<p>WARNING: If you are using the free service you <strong>are not able</strong> to
+create new groups.</p>
+<p>If you are a Tangerine subscriber, the user1 account can be configured
+to be the only account with permissions to create new groups. If this is
+desired, please send a request for this configuration to
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#116;&#97;&#110;&#103;&#101;&#114;&#105;&#110;&#101;&#104;&#101;&#108;&#112;&#46;&#122;&#101;&#110;&#100;&#101;&#115;&#107;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#116;&#97;&#110;&#103;&#101;&#114;&#105;&#110;&#101;&#104;&#101;&#108;&#112;&#46;&#122;&#101;&#110;&#100;&#101;&#115;&#107;&#46;&#99;&#111;&#109;</a></p>
+<h1 id="creating-a-new-instrumentform">Creating a New Instrument/Form</h1>
+<p>When you create a group, it will show up in the list groups in your
+Tangerine instance. Click on the group name to start creating your
+instruments in Tangerine.</p>
+<p>When you create a new group, Tangerine automatically creates an example
+instrument/form. To add a form or instrument, click on the ADD FORM
+button.</p>
+<p><img alt="" src="../media/image5.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;4.054581146106736in&rdquo;}</p>
+<p>This will add an entry to the already existing list of forms but with a
+default name, &lsquo;New Form&rsquo;.</p>
+<p>You will notice that there is also a User Profile form. This form
+represents the profile each user has to fill in, after they create their
+user login details on the tablet. All information that you require in
+the user profile is attached to each record in the CSV export file. The
+user profile represents your assessor&rsquo;s information.</p>
+<p>Click the plus icon <img alt="" src="../media/image6.png" />{width=&rdquo;0.2378543307086614in&rdquo;
+height=&rdquo;0.24700240594925635in&rdquo;} to create a new record for the form.
+This can be used for offline data entry. Be careful as this record is
+saved in the database even if you do not reach the Submit button.</p>
+<p>Click on the pen icon <img alt="" src="../media/image7.png" />{width=&rdquo;0.2375in&rdquo;
+height=&rdquo;0.34146325459317584in&rdquo;}to modify the name of your instrument and
+to start adding/editing instrument sections and items.</p>
+<p>Click on the print icon
+<img alt="" src="../media/image7.png" />{width=&rdquo;0.2554702537182852in&rdquo;
+height=&rdquo;0.36656714785651795in&rdquo;} to open a new printable menu where you
+can select two of the print details for each item in your instrument.
+This is the view we often use to quality assure (QA) the instrument or
+to get a list of variables and their definition</p>
+<p><img alt="" src="../media/image8.png" />{width=&rdquo;0.25972222222222224in&rdquo;
+height=&rdquo;0.2298611111111111in&rdquo;}</p>
+<p>Click on the copy icon to create a copy of the current instrument. You
+can copy an instrument to a different group or to the current one.</p>
+<p><img alt="" src="../media/image7.png" />{width=&rdquo;0.25972222222222224in&rdquo;
+height=&rdquo;0.4097222222222222in&rdquo;}Click on the trash icon to delete this
+form.</p>
+<p><img alt="" src="../media/image9.png" />{width=&rdquo;0.25972222222222224in&rdquo;
+height=&rdquo;0.22036964129483816in&rdquo;}Click on the archive icon to archive an
+assessment. All archived forms are moved to the bottom of the page</p>
+<p><img alt="" src="../media/image10.png" />{width=&rdquo;0.23434055118110236in&rdquo;
+height=&rdquo;0.22013888888888888in&rdquo;}</p>
+<p>If a form is archived, click the unarchive button to activate a form.
+Only active forms are displayed in tablet listing of forms to the
+assessor.</p>
+<p><img alt="" src="../media/image11.png" />{width=&rdquo;0.2798611111111111in&rdquo; height=&rdquo;0.3in&rdquo;}</p>
+<p>As you will see later, by clicking from this view, you can also access
+your data.</p>
+<p>To rename your instrument/form, click on the pen icon for the form,
+overwrite the &ldquo;New Form&rdquo; entry under &ldquo;Form Title&rdquo; and <strong>hit &ldquo;SAVE&rdquo;.</strong></p>
+<p><img alt="" src="../media/image12.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;1.1611111111111112in&rdquo;}</p>
+<h1 id="editing-instrument-sections">Editing Instrument Sections</h1>
+<p>Once you have selected to edit your new or existing instrument/form, you
+will see a screen like the one below. This view lists the different
+sections of your instrument. Each section can contain one or more items.</p>
+<p>On the tablet, items in any one section can be seen on a single screen.
+The user moves through items by &ldquo;scrolling&rdquo; down the screen. The user
+moves through sections by hitting &ldquo;Next&rdquo; or &ldquo;Back&rdquo; on the tablet.</p>
+<p><img alt="" src="../media/image13.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;1.6465277777777778in&rdquo;}</p>
+<p>The form editor provides the interface for adding and editing instrument
+sections and items. This interface provides controls that make the
+following actions possible:</p>
+<ul>
+<li>
+<p><strong>EDIT HTML</strong> - This converts the interface from a WYSIWYG (&ldquo;what
+    you see is what you get&rdquo;) to a HTML code interface</p>
+</li>
+<li>
+<p><strong>PREVIEW</strong> &ndash; This control enables you to have a preview of your
+    form in the current state</p>
+</li>
+<li>
+<p><strong>SAVE</strong> &ndash; This control allows you to save the form in its current
+    state</p>
+</li>
+<li>
+<p><strong>ADVANCED</strong> &ndash; This Control enables you to access the on-open logic
+    and on-change logic. This logic is used for skipping an entire
+    instrument section.</p>
+</li>
+<li>
+<p><strong>ADD SECTION</strong> &ndash; This allows you to add a section of items to your
+    instrument.</p>
+</li>
+<li>
+<p><strong>EDIT</strong> <img alt="" src="../media/image14.png" />{width=&rdquo;0.20833333333333334in&rdquo;
+    height=&rdquo;0.20238079615048118in&rdquo;} &ndash; This icon opens the interface to
+    edit an instrument section (e.g., add items)</p>
+</li>
+<li>
+<p><strong>DELETE</strong> <img alt="" src="../media/image15.png" />{width=&rdquo;0.24434820647419073in&rdquo;
+    height=&rdquo;0.2519838145231846in&rdquo;} &ndash; This icon deletes this instrument
+    section</p>
+</li>
+</ul>
+<p>In this view, you can drag sections to reorder them.</p>
+<h2 id="adding-sections-to-an-instrumentform">Adding Sections to an Instrument/Form</h2>
+<p>To add a new section to your instrument, hit &ldquo;ADD SECTION&rdquo;.</p>
+<p><img alt="" src="../media/image16.png" />{width=&rdquo;1.107674978127734in&rdquo;
+height=&rdquo;0.39807086614173226in&rdquo;}</p>
+<p>The interface allows a drag-and-drop feature which enables reordering of
+the sections already created. The order in which the sections are
+listed, is the same as the sequence of screen that will be shown on the
+tablet.</p>
+<h2 id="section-editor">Section Editor</h2>
+<p>Upon adding a new section, or selecting to &ldquo;EDIT&rdquo; your instrument
+section, you will see the section editor screen below.</p>
+<p><img alt="" src="../media/image17.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;2.0in&rdquo;}</p>
+<p>If this is a new section, you might give it a section header. Click the
+pen icon on the right of the blue bar and overwrite the &ldquo;&hellip;&rdquo; under
+&ldquo;title&rdquo;. Or any other of the configuration options. Then hit <strong>SUBMIT</strong>
+to save your edits.</p>
+<p><img alt="" src="../media/image18.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;2.14375in&rdquo;}</p>
+<p>SECTION OPTIONS</p>
+<p>Each one of the sections has a some options that you can control:</p>
+<p><strong>Show this section in the summary at the end</strong> &ndash; mark <strong>only</strong> if this
+section is the <strong>last one</strong>, and if you have <strong>coded some
+summary</strong>/feedback otherwise leave unchecked.</p>
+<p><strong>Hide the back button</strong> &ndash; checking this option will remove the Back
+button from the section when rendered on the tablet.</p>
+<p><strong>Hide the next button</strong> &ndash; hides the Next button on a section.
+Sometimes advancing the page may depend on the selection of an item,
+just like it is on some EF inputs. Generally, you keep this unchecked.</p>
+<p><strong>right-to-left orientation</strong> &ndash; switches the position of the Back and
+Next buttons for RTL languages.</p>
+<p><strong>Hide navigation labels</strong> &ndash; Hides the label from the Back and Next
+buttons so that it becomes an arrow.</p>
+<p><strong>Hide navigation icons</strong> &ndash; Hides the arrow from the back and Next
+buttons. If both this and the above are checked you will only see an
+orange button without labels and text.</p>
+<p><strong>Threshold: Number of incorrect answers before disabling remaining
+questions</strong> &ndash; This option is used in conjunction with radio button
+questions <strong>only</strong>. Set it to the number of consecutive incorrect
+replies before the test is discontinued. You must mark an option in the
+radio button group as <strong>Correct for this to work</strong>. Only <strong>one</strong> correct
+option per question can be defined.</p>
+<p><img alt="" src="../media/image19.png" />{width=&rdquo;1.0373239282589677in&rdquo;
+height=&rdquo;0.36828083989501315in&rdquo;}</p>
+<p>To add an item to your instrument section, click</p>
+<p>This opens the item type selection interface.</p>
+<p><img alt="" src="../media/image20.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;1.4375in&rdquo;}</p>
+<p>These elements are subdivided into groups of item types (e.g., inputs,
+location, lists, misc):</p>
+<p><strong>Inputs</strong></p>
+<p>INPUT-DATE: This item type renders a calendar widget on the tablet</p>
+<p><img alt="" src="../media/image21.png" />{width=&rdquo;2.0967749343832023in&rdquo;
+height=&rdquo;0.35526793525809275in&rdquo;}</p>
+<p>INPUT-TEXT: This item type is a standard numbers and letters field</p>
+<p><img alt="" src="../media/image22.png" />{width=&rdquo;2.013888888888889in&rdquo;
+height=&rdquo;0.4049584426946632in&rdquo;}</p>
+<p>INPUT-TIME: This item type displays a clock hour selection on the tablet</p>
+<p><img alt="" src="../media/image23.png" />{width=&rdquo;1.9444444444444444in&rdquo;
+height=&rdquo;0.4132228783902012in&rdquo;}</p>
+<p>INPUT-NUMBER: This item type opens up the number keyboard on the tablet
+and doesn&rsquo;t allow any other non-number characters to be inserted here</p>
+<p><img alt="" src="../media/image24.png" />{width=&rdquo;2.361111111111111in&rdquo;
+height=&rdquo;0.43801727909011373in&rdquo;}</p>
+<p><strong>Location</strong></p>
+<p>GPS: This item type automatically collects GPS coordinates of the tablet</p>
+<p><img alt="" src="../media/image25.png" />{width=&rdquo;1.0138888888888888in&rdquo;
+height=&rdquo;0.36363735783027124in&rdquo;}</p>
+<p>LOCATION: The location item type requires a list of locations, e.g.
+school names by district and region to be imported to the Tangerine
+editor.</p>
+<p><img alt="" src="../media/image26.png" />{width=&rdquo;1.625in&rdquo; height=&rdquo;0.4722222222222222in&rdquo;}</p>
+<p><strong>Lists</strong></p>
+<p>CHECKBOX: This item type allows for multiple answers to be selected from
+a list of options</p>
+<p><img alt="" src="../media/image27.png" />{width=&rdquo;1.7352241907261592in&rdquo;
+height=&rdquo;0.39645341207349083in&rdquo;}</p>
+<p>CHECKBOX GROUP: Allows for multiple answer options to be selected from a
+group of options</p>
+<p><img alt="" src="../media/image28.png" />{width=&rdquo;2.5in&rdquo; height=&rdquo;0.4722222222222222in&rdquo;}</p>
+<p>DROPDOWN (select): This item type allows for a single answer selection
+for longer lists</p>
+<p><img alt="" src="../media/image29.png" />{width=&rdquo;2.7777777777777777in&rdquo;
+height=&rdquo;0.4444444444444444in&rdquo;}</p>
+<p>RADIO BUTTONS: This item type only allows for a single answer selection
+from a list of answer options</p>
+<p><img alt="" src="../media/image30.png" />{width=&rdquo;2.1805555555555554in&rdquo;
+height=&rdquo;0.4722222222222222in&rdquo;}</p>
+<p><strong>Misc</strong></p>
+<p>IMAGE: the image items allows you to select an image already uploaded by
+the media library and present it to the user on a particular section</p>
+<p><img alt="" src="../media/image31.png" />{width=&rdquo;1.2808989501312336in&rdquo;
+height=&rdquo;0.35810148731408575in&rdquo;}</p>
+<p>SIGNATURE: this input type allows you to capture a signature by the
+assessor.</p>
+<p><img alt="" src="../media/image32.png" />{width=&rdquo;1.441557305336833in&rdquo;
+height=&rdquo;0.36313976377952756in&rdquo;}</p>
+<p>HTML CONTENT CONTAINER: This item type allows for flexible integration
+of headers, help text, or transition messages that do not require any
+user input or response.</p>
+<p><img alt="" src="../media/image33.png" />{width=&rdquo;3.361111111111111in&rdquo;
+height=&rdquo;0.4027777777777778in&rdquo;}</p>
+<p>QR CODE SCANNER: This item allows scanning of a QR and Data Matrix
+codes. Tangerine will capture and save the target info (e.g. URL).</p>
+<p><img alt="" src="../media/image34.png" />{width=&rdquo;2.736111111111111in&rdquo;
+height=&rdquo;0.4876038932633421in&rdquo;}</p>
+<p>EF TOUCH: This item type is to assess children&rsquo;s executive functions,
+including working memory, inhibitory control, and cognitive flexibility
+(requires RTI manual support to upload your images and sounds).</p>
+<p><img alt="" src="../media/image35.png" />{width=&rdquo;1.7083333333333333in&rdquo;
+height=&rdquo;0.46281058617672793in&rdquo;}</p>
+<p>TIMED GRID: This item type facilitates timed assessment approaches,
+e.g., to assess letter sound knowledge, oral reading fluency or math
+operations.</p>
+<p><img alt="" src="../media/image36.png" />{width=&rdquo;1.7222222222222223in&rdquo;
+height=&rdquo;0.4722222222222222in&rdquo;}</p>
+<p>UNTIMED GRID: This item type facilitates assessment approaches that are
+not timed, but require many items, e.g. oral counting, untimed reading
+comprehension tasks, etc.</p>
+<p><img alt="" src="../media/image37.png" />{width=&rdquo;2.2083333333333335in&rdquo;
+height=&rdquo;0.5138888888888888in&rdquo;}</p>
+<p>CONSENT: This item is a special function for participant consent. If the
+participants responds that no consent is given, the form will be closed
+and data saved accordingly.</p>
+<p><img alt="" src="../media/image38.png" />{width=&rdquo;1.7916666666666667in&rdquo;
+height=&rdquo;0.4722222222222222in&rdquo;}</p>
+<p>Depending on the element chosen, an interface for providing more detail
+on the item being rendered/created is presented in the Item Editor.</p>
+<h2 id="copying-items">Copying Items</h2>
+<p>If you have an element and/or content which is the same as a previous
+element (e.g., radio buttons) that you would like to insert into your
+instrument quickly, without having to click &ldquo;INSERT HERE&rdquo; again, there
+is a COPY feature that you can use to do this. First, enter your
+original content (e.g., variable name, labels, and values) and then
+click <strong>SUBMIT</strong>. Once the first step is complete, next you click on the
+<img alt="" src="../media/image39.png" />{width=&rdquo;0.34375in&rdquo; height=&rdquo;0.28125in&rdquo;} icon. Doing
+so automatically creates a duplicate of all your original content,
+except the variable name, which you will need to edit, if desired. In
+the image below, you can see that all duplicates are auto-populated with
+the name &ldquo;widget,&rdquo; followed by an underscore, and a mix of letters and
+numbers (always different from the previous copy). If you would like to,
+you can edit all the content of the copy to fit your needs.</p>
+<p><img alt="" src="../media/image40.png" />{width=&rdquo;6.40625in&rdquo; height=&rdquo;2.625in&rdquo;}</p>
+<h1 id="item-editor">Item Editor</h1>
+<p>The item editor screen is similar for many of the item types. It usually
+contains the following elements:</p>
+<p><img alt="" src="../media/image41.png" />{width=&rdquo;5.463865923009624in&rdquo;
+height=&rdquo;4.081395450568679in&rdquo;}</p>
+<p><strong>Variable name</strong>: This name has to be unique for any instrument/form,
+as this will be used for the CSV data output as column header with each
+observation/child assessed/interview being a row. Avoid special
+characters and spaces, use lowercase only (e.g., &ldquo;age&rdquo;).</p>
+<p><strong>Label</strong>: This will be the item label/name that will be displayed to
+the user (e.g. &ldquo;How old are you?&rdquo;)</p>
+<p><strong>Question number</strong>: If you input a number in here, you will see that
+the entire questions is moved to the right and the question number
+stands out when looking at the page. Use this if you are looking for a
+visual effect like this.</p>
+<p><strong>Hint Text</strong>: This field allows you to add text that acts as a hint for
+the user (e.g., &ldquo;Enter child&rsquo;s age or year of birth, if known&rdquo;)</p>
+<p><strong>Show if</strong>: This is the place to enter item-level skip logic (see
+section 5 of this manual).</p>
+<p><strong>Required:</strong> Selecting this checkbox marks the element as a required
+field. This ensures that users will enter a value before proceeding to
+other instrument sections or finalizing the instrument/form.</p>
+<p><strong>Disabled</strong>: Selecting this checkbox marks the element as inactive. The
+item is visible to the user on the tablet, but its value cannot be
+changed.</p>
+<p><strong>Hidden:</strong> Selecting this checkbox makes the element inactive AND
+invisible on the tablet.</p>
+<h2 id="gps-item">GPS Item</h2>
+<p>Use the GPS item to record the location (longitude &amp; latitude) of the
+user while filling in the instrument/form.</p>
+<p>We suggest placing a GPS item always in its own section. Do not combine
+with other items.</p>
+<p>When selecting to add an item of the GPS type, Tangerine presents the
+below item editor screen.</p>
+<p><img alt="" src="../media/image42.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;5.3902777777777775in&rdquo;}</p>
+<p>The following might be a way to configure this item:</p>
+<p><strong>Variable name</strong>: Enter &ldquo;gps&rdquo;.</p>
+<p><strong>Hint Text</strong>: Leave blank</p>
+<p><strong>Show if</strong>: Leave blank</p>
+<p><strong>Valid if</strong>: Leave blank</p>
+<p><strong>Required:</strong> Select this checkbox to make this a required field.</p>
+<p><strong>Disabled</strong>: Leave blank</p>
+<p><strong>Hidden</strong>: Leave blank</p>
+<p>Hit &ldquo;<strong>SUBMIT</strong>&rdquo; to see the below item added to the section editor.</p>
+<p><img alt="" src="../media/image43.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;0.85in&rdquo;}</p>
+<p>On the tablet this item will look like this:</p>
+<p><img alt="" src="../media/image44.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.3881944444444445in&rdquo;}</p>
+<h2 id="location">LOCATION</h2>
+<p>This item type offers a dropdown listing of predefined location
+information such as, e.g., region, district, and school name. Before you
+add this item to your form, you need to upload a location list and
+configure Tangerine:</p>
+<p>To see a video of how to do this, please go to <a href="#importing-a-location-list">Appendix
+B</a></p>
+<p>First, decide what levels you would like to show and prepare a CSV file
+that contains your locations accordingly. Each column header will
+present a location level (e.g. column A header might be region; column B
+header might be district, etc.). Make sure each level/column header
+contains only a single word and no spaces.</p>
+<p>Second, define the location levels for Tangerine. Click on the tab
+&ldquo;MANAGE LOCATION LIST LEVELS&rdquo; located at the top of your group&rsquo;s main
+page that lists your instruments/forms.</p>
+<p><img alt="" src="../media/image45.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.47244094488188976in&rdquo;}</p>
+<p>Click &ldquo;Create a New Location Level&rdquo;.</p>
+<p><img alt="" src="../media/image46.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;1.1538003062117235in&rdquo;}</p>
+<p>On the next screen, enter the name of the &ldquo;highest&rdquo; location level under
+&ldquo;Label&rdquo; (e.g. region). Repeat this process for all other location
+levels, however, for each &ldquo;child&rdquo; level, select which is the parent
+level. E.g. in the case of district, the &ldquo;Parent Level&rdquo; would be
+&ldquo;region&rdquo;, and so forth. Hit &ldquo;Submit&rdquo; to save.</p>
+<p><strong>NOTE:</strong> You cannot delete location levels. Be careful and deliberate
+as you define them for your group. If you made a mistake or need to make
+changes, contact the Tangerine helpdesk.</p>
+<p><img alt="" src="../media/image47.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;2.667465004374453in&rdquo;}</p>
+<p>Next, navigate to the &ldquo;MANAGE LOCATION LIST CONTENT&rdquo; tab and select
+&ldquo;Import Location List&rdquo;. Double check that your CSV file contains only
+those columns that you have defined as levels and spelled exactly the
+same!</p>
+<p>Once you selected the CSV, Tangerine will ask you to map the location
+levels you already defined to the column headers found in your csv file.</p>
+<p><img alt="" src="../media/image48.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;3.136111111111111in&rdquo;}</p>
+<p>Click on the small arrows to select the matching column header. For each
+ID field, select &ldquo;Map a column to a level and select &ldquo;AutoGeneratedID&rdquo;
+for the ID as shown in the example below.</p>
+<p><img alt="" src="../media/image49.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;1.2909722222222222in&rdquo;}</p>
+<p>Then click &ldquo;Process CSV&rdquo; as shown in the screen above. Once processing
+is completed, you will receive a notification like this:</p>
+<p><img alt="" src="../media/image50.png" />{width=&rdquo;5.0236220472440944in&rdquo;
+height=&rdquo;0.9875492125984252in&rdquo;}</p>
+<p>Once you have successfully uploaded a location list and prepared
+Tangerine, you can add the location item to your form. The following
+might be a way to configure this item, once you completed the above
+steps.</p>
+<p>If you think that your location list may change significantly, and you&rsquo;d
+like to re-upload it at some point thus not implementing any changes
+manually, consider adding manual IDs to your location file. In the
+instruction above, you saw how to add the Autogenerated ID that
+Tangerine inserts. These IDs, however, are not persisted when you
+re-upload your location file. In such cases, where you know that you&rsquo;d
+rather re-upload the entire file, we recommend that you insert an ID
+column and you preserve those IDs across versions of your location list.
+By doing that you ensure that any matching on location IDs (and not on
+Location labels) will be persisted.</p>
+<p>To upload a location file with IDs, first create those IDS in the Excel
+file. Then, on the Map location field instead of selecting Autogenerated
+ID, select the column representing the ID for the corresponding level.</p>
+<p><strong>WARNING:</strong> Upon wiping out the location list when you have not
+generated the location IDS, all previous results collected will be
+missing the labels for those location and will contain only the old IDs;
+all data on the tablets under the Visits tab will show the ID rather
+than the label. This is why we <strong>highly recommend</strong> altering the
+location list manually or maintaining the IDs across different version
+of the location list in your Excel file.</p>
+<p>Check out this Excel file to see a location list with IDs that you can
+import in Tangerine. The formula for generating the IDs can be copied to
+your own file: <a href="http://bit.ly/2WzcTnB">http://bit.ly/2WzcTnB</a></p>
+<p><img alt="" src="../media/image51.png" />{width=&rdquo;4.427083333333333in&rdquo;
+height=&rdquo;4.485416666666667in&rdquo;}</p>
+<p><strong>Variable name</strong>: Enter &ldquo;location&rdquo;.</p>
+<p><strong>Hint Text</strong>: Leave blank</p>
+<p><strong>Show levels (ex. county,subcounty):</strong> Enter &ldquo;province,district,school&rdquo;</p>
+<p><strong>Show if</strong>: Leave blank</p>
+<p><strong>Valid if</strong>: Leave blank</p>
+<p><strong>Required:</strong> Select this checkbox to make this a required field.</p>
+<p><strong>Disabled</strong>: Leave blank</p>
+<p><strong>Hidden</strong>: Leave blank</p>
+<p><strong>Show meta-data:</strong> Leave blank</p>
+<p>Hit &ldquo;<strong>SUBMIT</strong>&rdquo; to see the below item added to the section editor.</p>
+<p>On the tablet this item will look like this:</p>
+<p><img alt="" src="../media/image52.png" />{width=&rdquo;4.479166666666667in&rdquo;
+height=&rdquo;0.3850404636920385in&rdquo;}</p>
+<p><img alt="" src="../media/image52.png" />{width=&rdquo;4.479338363954506in&rdquo;
+height=&rdquo;1.624760498687664in&rdquo;}</p>
+<p><strong>NOTE</strong>: Without a location list, no location will be displayed, and
+the item will be seen as &ldquo;loading&rdquo;.</p>
+<h2 id="checkbox-group-checkbox-radio-buttons-or-dropdowns">CHECKBOX GROUP (Checkbox, Radio Buttons, or Dropdowns)</h2>
+<p>This item type lets you define a checkbox item that lets a user pick one
+or more options.</p>
+<p>The following might be a way to configure this item:</p>
+<p><img alt="" src="../media/image53.png" />{width=&rdquo;3.1875in&rdquo; height=&rdquo;3.7354166666666666in&rdquo;}</p>
+<p><strong>Variable name</strong>: Enter &ldquo;books&rdquo;.</p>
+<p><strong>Label:</strong> Enter &ldquo;What kind of books do you like to read?&rdquo;</p>
+<p><strong>Hint Text</strong>: Enter &ldquo;Tick all that apply&rdquo;</p>
+<p><strong>Show if</strong>: Leave blank</p>
+<p><strong>Valid if</strong>: Leave blank</p>
+<p><strong>Required:</strong> Selecting this checkbox to make this a required field.</p>
+<p><strong>Disabled</strong>: Leave blank</p>
+<p><strong>Hidden</strong>: Leave blank</p>
+<p><strong>Value</strong> (answer option): Enter the data value for the first answer
+option, e.g., &ldquo;0&rdquo;</p>
+<p><strong>Label</strong> (answer option): Enter the label for the first answer option,
+e.g., &ldquo;None&rdquo;</p>
+<p>Hit &ldquo;ADD ANOTHER&rdquo; to add additional answer options, e.g.:</p>
+<p><strong>Value</strong> (answer option): &ldquo;1&rdquo;</p>
+<p><img alt="" src="../media/image54.png" />{width=&rdquo;3.1798611111111112in&rdquo;
+height=&rdquo;0.9777777777777777in&rdquo;}<strong>Label</strong> (answer option): &ldquo;Storybooks
+(fiction)&rdquo;</p>
+<p>Hit &ldquo;ADD ANOTHER&rdquo; to add additional answer options, e.g.:</p>
+<p><strong>Value</strong> (answer option): &ldquo;2&rdquo;</p>
+<p><strong>Label</strong> (answer option): &ldquo;Books about real things (non-fiction)</p>
+<p>When done adding all answer options, hit &ldquo;<strong>SUBMIT</strong>&rdquo;.</p>
+<p>On the tablet this item will look like this:</p>
+<p><img alt="" src="../media/image55.png" />{width=&rdquo;4.908562992125984in&rdquo;
+height=&rdquo;2.1185181539807525in&rdquo;}</p>
+<p><strong>NOTE:</strong> The item type &ldquo;CHECKBOX&rdquo; only adds a single checkbox to the
+form, with the item label being the answer option label.</p>
+<p><img alt="" src="../media/image56.png" />{width=&rdquo;4.8977012248468945in&rdquo;
+height=&rdquo;3.4148151793525807in&rdquo;}</p>
+<p>On the tablet this single checkbox item will look like this:</p>
+<p><img alt="" src="../media/image57.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.46729002624671917in&rdquo;}</p>
+<p><img alt="" src="../media/image57.png" />{width=&rdquo;6.263514873140857in&rdquo;
+height=&rdquo;0.3925240594925634in&rdquo;}</p>
+<h2 id="radio-buttons">RADIO BUTTONS</h2>
+<p>Radio buttons are an item type used for items that allow for only one
+answer. The configuration for radio buttons is the same as for checkbox
+group with one exception. You will see that radio button options have a
+checkmark to indicate which answer is <strong>correct</strong>. This is used in
+conjunction with the <strong>Threshold</strong> defined in the section header.</p>
+<p><img alt="" src="../media/image58.png" />{width=&rdquo;2.8986111111111112in&rdquo;
+height=&rdquo;2.987800743657043in&rdquo;}</p>
+<p>When you have a threshold defined as 4, and for each question there is
+only <strong>one question option</strong> defined as correct, Tangerine will
+discontinue (hide the questions) after 4 consecutive replies are given
+as not correct. You can use this in EGMA tasks or in any other scenario
+where this makes sense</p>
+<p>On the tablet the radio button item will look like this:</p>
+<p><img alt="" src="../media/image59.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;1.28125in&rdquo;}</p>
+<h2 id="dropdown">DROPDOWN</h2>
+<p>Dropdown is an item type used for items that allow for only one answer
+to be picked from a dropdown list of items. This item type is convenient
+when there are many options to choose from. The configuration for a
+dropdown item is the same as for checkbox group.</p>
+<p>On the tablet the dropdown item will look like this:</p>
+<p><img alt="" src="../media/image60.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.2756944444444445in&rdquo;}</p>
+<h2 id="timed-grid">TIMED GRID</h2>
+<p>This item type facilitates timed assessment approaches, e.g., to assess
+letter sound knowledge, oral reading fluency or math operations. The
+following might be a way to configure this item:</p>
+<p><strong>Variable name</strong>: Enter &ldquo;letter_sound&rdquo;.</p>
+<p><strong>Number of columns:</strong> Enter the number of columns by which you&rsquo;d like
+to organize the items. Enter, e.g. &ldquo;4&rdquo; (Tip: choose less columns for
+larger items, like words or operation problems)</p>
+<p><strong>Hint Text</strong>: Leave blank</p>
+<p><strong>Auto Stop</strong>: The autostop field defines the number of consecutive
+incorrect items, starting from the first one, after which the test stops
+automatically. For example, with an autostop value of 10, if a child has
+the first 10 items all incorrect, the test will stop. If a child has the
+first 4 items correct and then the following 10 items incorrect, the
+test will not autostop.</p>
+<p><img alt="" src="../media/image61.png" />{width=&rdquo;4.808333333333334in&rdquo;
+height=&rdquo;5.261805555555555in&rdquo;}<strong>Show if</strong>: Leave blank</p>
+<p><strong>Valid if</strong>: Leave blank</p>
+<p><strong>Mark entire rows:</strong> This option allows the user to mark and entire row
+of items as incorrect (e.g. if a child skipped an entire row of sounds
+in a letter sound assessment)</p>
+<p><strong>Required:</strong> Selecting this checkbox to make this a required field.</p>
+<p><strong>Disabled</strong>: Leave blank</p>
+<p><strong>Hidden</strong>: Leave blank</p>
+<p><strong>Duration in seconds:</strong> Enter the time allowed to complete this
+assessment, e.g. &ldquo;60&rdquo; for 60 seconds or one minute.</p>
+<p><strong>Options (each option separated by a space)</strong>: Enter all grid items
+here. Separate each item by a space from the next; if you have extra
+spaces please remove them!</p>
+<p>When done adding all answer options, hit &ldquo;<strong>SUBMIT</strong>&rdquo;.</p>
+<p><strong>NOTE:</strong> For these kids of assessments there are usually instructions
+preceding the assessment items. Insert those instructions as a &ldquo;HTML
+CONTENT CONTAINER&rdquo; item first, as shown below, followed by the &ldquo;TIMED
+GRID&rdquo; in the same section. We recommend to only feature the instructions
+(HTML Content) and Timed Grid in any one section of your instrument/form</p>
+<p>On the tablet the timed grid item will look like this:</p>
+<p><img alt="" src="../media/image62.png" />{width=&rdquo;4.25in&rdquo; height=&rdquo;3.78125in&rdquo;}</p>
+<p>.</p>
+<h2 id="html-content-container">HTML CONTENT CONTAINER</h2>
+<p>This item type allows for flexible integration of headers, help text, or
+transition messages that do not require any user input or response. You
+can treat this container as a variable and hide or show different
+instructional text upon the selection of different options.</p>
+<p>The following might be a way to configure this item:</p>
+<p><strong>Variable name</strong>: Enter &ldquo;Assessor instructions&rdquo;.</p>
+<p><strong>Show if</strong>: Leave blank</p>
+<p><strong>Valid if</strong>: Leave blank</p>
+<p><strong>Mark entire rows:</strong> This option allows the user to mark an entire row
+of items as incorrect (e.g. if a child skipped an entire row of sounds
+in a letter sound assessment)</p>
+<p><strong>Required:</strong> Leave blank</p>
+<p><strong>Disabled</strong>: Leave blank</p>
+<p><strong>Hidden</strong>: Leave blank</p>
+<p><strong>Rows 1-X</strong>: Insert assessor instructions, use html tags to insert line
+breaks or formatting (e.g. \&lt;br> for a line break; \&lt;b>text\&lt;/b> for
+bolding a piece of text, etc.).</p>
+<p>When done adding all answer options, hit &ldquo;<strong>SUBMIT</strong>&rdquo;.</p>
+<p><img alt="" src="../media/image63.png" />{width=&rdquo;4.5in&rdquo; height=&rdquo;4.15in&rdquo;}</p>
+<p>On the tablet this HTML container item will look like this:</p>
+<p><img alt="" src="../media/image64.png" />{width=&rdquo;3.5395833333333333in&rdquo;
+height=&rdquo;4.262505468066491in&rdquo;}</p>
+<h1 id="on-open-on-change-skip-logic-editor">On-Open / On-Change (Skip) Logic Editor</h1>
+<p>Every instrument/form, section, and individual item provides an
+interface for adding logic, e.g. skip logic, that controls the
+interactivity and presentation of the instrument, section, or item.</p>
+<h3 id="logic-at-instrumentform-level">Logic at instrument/form level</h3>
+<p>At the instrument/form level, accessing this logic editor is via
+advanced settings in the section editor.</p>
+<p><img alt="" src="../media/image65.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;1.5645833333333334in&rdquo;}</p>
+<p>Click on <strong>ADVANCED</strong> to see the screen below with &ldquo;on-open&rdquo; and
+&ldquo;on-change&rdquo; entries.</p>
+<p><img alt="" src="../media/image66.png" />{width=&rdquo;6.263888888888889in&rdquo; height=&rdquo;1.58125in&rdquo;}</p>
+<h3 id="logic-at-section-level">Logic at section level</h3>
+<p>At the section level, the logic editor can be accessed by editing the
+<strong>Section Details</strong> clicking the pen icon on the right of the blue bar
+(where one can also rename the section).</p>
+<p><img alt="" src="../media/image67.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.1243055555555554in&rdquo;}</p>
+<h3 id="logic-at-item-level">Logic at item level</h3>
+<p>As outlined earlier, at the <strong>item level</strong>, such logic can be added in
+the &ldquo;Show if&rdquo; field in the item editor.</p>
+<p><img alt="" src="../media/image68.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.9034722222222222in&rdquo;}</p>
+<h3 id="on-open-and-on-change">On-open and on-change</h3>
+<p><img alt="" src="../media/image69.png" />{width=&rdquo;5.11in&rdquo; height=&rdquo;3.83in&rdquo;}As the name
+suggest, <strong>on-open</strong> logic is only executed when the form is opened
+whereas <strong>on-change</strong> logic is always executed whenever a change happens
+in the whole form. When selecting <strong>on-open logic</strong> either at the
+instrument/form level or in the section editor, the following screen
+appears. The interface allows JavaScript logic to be incorporated into
+the instrument.</p>
+<h3 id="skip-logic-examples">(Skip) Logic Examples</h3>
+<p><strong>You want to skip an entire section:</strong></p>
+<p>Navigate to and select the &ldquo;on-change&rdquo; at the instrument/form level.
+This logic will not work if you insert it in a section (it must be
+defined on form level)</p>
+<p>In this example, the section gets skipped based on responses from a
+previous item, e.g., if the respondent answered negatively to a previous
+question &ldquo;Do you have children?&rdquo;. Note that the sectionID is provided in
+Tangerine in the section details as shown below. Form level skip logic
+is used to present or hide an entire section page to the user. This is
+very useful when managing a workflow and you need to display some
+sections but hide others according to the selected option for a
+question. For example, you can show a certain section only for grade 1
+and hide it if grade 2 is selected.</p>
+<p><img alt="" src="../media/image70.png" />{width=&rdquo;6.5in&rdquo; height=&rdquo;0.7222222222222222in&rdquo;}</p>
+<blockquote>
+<p>if(getValue('children') == '1')</p>
+</blockquote>
+<p>{sectionEnable('item_1')}</p>
+<blockquote>
+<p>else</p>
+<p>{sectionDisable('item_1')}</p>
+</blockquote>
+<p><strong>You want to hide a set of items based on responses to an item in a
+previous section:</strong></p>
+<p>Navigate to and select the &ldquo;on-open&rdquo; at the section level.</p>
+<p>In this example several items in this section are hidden based on the
+participant&rsquo;s response to the item about the child&rsquo;s schooling
+experience in a previous section.</p>
+<blockquote>
+<p>if(getValue('school') == '1')</p>
+<p>{itemShow('grade')</p>
+<p>itemShow(&lsquo;repeatedgrade&rsquo;)</p>
+<p>itemShow(&lsquo;dropout&rsquo;)}</p>
+<p>else</p>
+<p>{itemHide('grade')</p>
+<p>itemHide(&lsquo;repeatedgrade&rsquo;)</p>
+<p>itemHide(&lsquo;dropout&rsquo;)}</p>
+</blockquote>
+<p><strong>You want to hide a set of items based on responses to two items in a
+previous section:</strong></p>
+<p>Navigate to and select the &ldquo;on-open&rdquo; at the section level.</p>
+<p>In this example the item &ldquo;teachers_name&rdquo; should only be shown if the
+participant&rsquo;s previous response to &ldquo;teacher_available&rdquo; was yes = 1
+<strong>AND</strong> if the participant&rsquo; previous response to &ldquo;class_selected&rdquo; was
+&ldquo;1&rdquo;.</p>
+<blockquote>
+<p>if(getValue(' teacher_available') === '1' &amp;&amp;
+getValue('class_selected') === '1' )</p>
+<p>{itemShow('teachers_name')}</p>
+<p>else</p>
+<p>{itemHide('teachers_name')}</p>
+</blockquote>
+<p>The Logic interface offer syntax highlighting. This is handy when you
+have errors in your code. Below is an example of an error and sample
+message.</p>
+<p><img alt="" src="../media/image71.png" />{width=&rdquo;6.003898731408574in&rdquo;
+height=&rdquo;1.0694444444444444in&rdquo;}</p>
+<p><strong>You want to skip an item:</strong></p>
+<p>Navigate to the &ldquo;Show if&rdquo; in the Item Editor.</p>
+<p><img alt="" src="../media/image68.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.9034722222222222in&rdquo;}</p>
+<p>In this example this item (e.g., &ldquo;Which grade did you repeat?&rdquo; will ONLY
+be shown if the response to the previous item (e.g., asking about
+whether the person ever repeated a grade) was &ldquo;yes&rdquo; (data value 1).</p>
+<p><strong>getValue('repeatedgrade') == '1'</strong></p>
+<p>Alternatively, for a preceding question that had &ldquo;Other&rdquo; as an answer
+option, the logic here might look like this:</p>
+<p><strong>getValue('q10') == '9'</strong></p>
+<p>Other examples might include a specific value of a preceding item. Use
+the below example for questions of type checkbox group, where more than
+one answer can be selected.</p>
+<p><strong>getValue('q12').includes('5')</strong></p>
+<p><strong>\
+NOTE:</strong> The skip logic commands used in Tangerine are case-sensitive and
+space-sensitive. You must type precisely the name of the variables which
+you want to reference.</p>
+<p><strong>NOTE:</strong> Use single straight quotation marks to demarcate variables
+names ', do NOT use single slanted quotation marks &lsquo; or double
+quotation marks &ldquo;.</p>
+<h3 id="skip-logic-with-grid-specific-functions">Skip logic with grid specific functions</h3>
+<p>You may be in the situation where you are required to perform a skip
+based on some results from a grid. We provide four functions that you
+can use in your skip logic to show or hide questions or sections based
+on the results of a grid.</p>
+<p><strong>Showing a question based on the number of attempted items on a grid</strong></p>
+<p>If you&rsquo;d like to hide a question when the number of attempted items on a
+particular grid is over a certain threshold you can make use of the
+&lsquo;numberOfItemsAttempted(input)&rsquo; function. If your grid variable is
+&lsquo;letter_sound&rsquo; and the question you want to skip is &lsquo;Q_1&rsquo; then in the
+question Q_1 I can insert the below skip logic(under Show If) to show
+it only when the number of attempted items on the grid is greater than
+10</p>
+<blockquote>
+<p>numberOfItemsAttempted(inputs.letter_sound) > 10</p>
+</blockquote>
+<p><strong>Showing a question based on the number of correct items of a grid</strong></p>
+<p>Sometimes it may be the case where you want to show a question only if
+there are a certain N items on the grid answered correctly. In those
+cases, we make use of the &lsquo;numberOfCorrectItems(input)&rsquo; function. If
+your grid variable is &lsquo;letter_sound&rsquo; and the question you want to skip
+is &lsquo;Q_1&rsquo; then in the question Q_1 I can insert the below skip
+logic(under Show If) to show this question only when the number of
+correct items on the grid is greater than 0</p>
+<blockquote>
+<p>numberOfCorrectItems(inputs.letter_sound) > 0</p>
+</blockquote>
+<p><strong>Show a question only if the grid did not auto stop</strong></p>
+<p>If you have set the autostop value of a grid with variable name
+&lsquo;letter_sound&rsquo; and you want to show a question only when the grid did
+not discontinue due to a triggered auto stop, then you can insert the
+below logic into the question&rsquo;s Show If field:</p>
+<blockquote>
+<p>inputs.letter_sound.gridAutoStopped</p>
+</blockquote>
+<p>The use of the &lsquo;!&rsquo; gives us the opposite of the result returned by the
+function. If the grid stopped the result will be true. When we use the
+&lsquo;!&rsquo; in front of the function, it means that, when the grid did not stop
+we want a positive answer hence show the question.</p>
+<p><strong>Show a question based on the words per minute read on a grid</strong></p>
+<p>It may happen that you need to show a question only to advanced
+students. In those cases, we make use of the function
+&lsquo;itemsPerMinute(input)&rsquo; This function returns the number of items per
+minute read by the student. We can use it, just as before, in the Show
+If input field of a question, like so:</p>
+<p>itemsPerMinute(inputs.letter_sound) > 35</p>
+<p>This call will force a question to be displayed only when the rate of
+reading was higher than 35 workds per minute.</p>
+<p><strong>NOTE:</strong> All of the above functions can also be used to show or a hide
+an entire section page.</p>
+<h1 id="field-validation">Field Validation</h1>
+<p>Tangerine provides the option to check the validity of an input field.
+Navigate to the &ldquo;<strong>Valid if</strong>&rdquo; field in the Item Editor.</p>
+<h2 id="field-validation-examples">Field Validation Examples</h2>
+<p>If, for example, the value entered into an &ldquo;INPUT-NUMBER&rdquo; field should
+have 9 or more characters, enter the following into &ldquo;Valid if&rdquo; for this
+item:</p>
+<p>input.value.length > 9</p>
+<p><img alt="" src="../media/image72.png" />{width=&rdquo;5.450694444444444in&rdquo;
+height=&rdquo;2.7984667541557307in&rdquo;}</p>
+<p>Tangerine also allow you to compare the value entered in the current
+item to a value entered for another, earlier item. This might be the
+case, e.g. for attendance when observing a classroom. That is, when
+recording attendance, the number of children present should not exceed
+the number of children enrolled. Assume that a relevant variable name of
+the earlier item was &ldquo;boys_enrolled&rdquo; and the current items is about the
+boys present, this might be the validation logic to enter under &ldquo;Valid
+if&rdquo; for boys_present.</p>
+<p>parseInt(input.value) \&lt;= inputs.boys_enrolled.value</p>
+<p><img alt="" src="../media/image73.png" />{width=&rdquo;5.45097987751531in&rdquo;
+height=&rdquo;2.7974037620297465in&rdquo;}</p>
+<p>If you want to validate that a number input is in between a particular
+range but also allow a &lsquo;No Reply&rsquo; answer, use the below validation rule:</p>
+<p>input.value >= 0 &amp;&amp; input.value \&lt;= 10 || input.value == 999</p>
+<p>Here we make sure that the user can only enter numbers between 0 and 10
+but also 999 as a reply to this question.</p>
+<p>If you have a list of checkboxes with the option No (value 0), NA (value
+888), and some other options, and you&rsquo;d like to make sure that the
+assessor cannot select the options No or the option NA along with other
+available options you need to implement a rule like the one below. The
+variable name in the below example is TQ1</p>
+<blockquote>
+<p>(!getValue('TQ1').includes('888') &amp;&amp;
+!getValue('TQ1').includes('0')) ||
+(getValue('TQ1').includes('888') ||
+getValue('TQ1').includes('0')) &amp;&amp; getValue('TQ1').length == 1</p>
+</blockquote>
+<h1 id="the-instrumentform-html-editor">The Instrument/Form HTML Editor</h1>
+<p>The Form HTML Editor provides a high-level interface to the form
+creation or modification of an entire instrument or form. We suggest
+avoiding this interface unless familiar with JavaScript, CSS and HTML5.
+This view allows direct editing of instrument properties for advanced
+users.</p>
+<p><img alt="" src="../media/image74.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;5.166666666666667in&rdquo;}</p>
+<h1 id="deploying-tangerine-for-offline-or-online-data-collection">Deploying Tangerine for Offline (or Online) Data Collection</h1>
+<p>Once the user is done creating the instruments/forms the next step is to
+deploy the instrument to an Android device for data collection. To
+release your instruments or instrument updates, select the &ldquo;Release&rdquo; tab
+in the top menu of the main group page.</p>
+<p><img alt="" src="../media/image75.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.104861111111111in&rdquo;}</p>
+<p>Upon selecting &ldquo;Release&rdquo;, you will see the screen below.</p>
+<p><img alt="" src="../media/image76.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.7819444444444446in&rdquo;}</p>
+<p>Tangerine offers two deployment types, test release and live release:</p>
+<ol>
+<li>
+<p><strong>Test Release</strong> &ndash; This release option (&ldquo;release to QA&rdquo;) is
+    recommended for testing the instruments. When you make changes and
+    updates to the instruments and release your changes as &ldquo;Test
+    Release&rdquo;, tablets that have the &ldquo;real&rdquo; version of Tangerine
+    installed will NOT receive this update. HOWEVER, any data synced
+    from the tablet devices even in a &ldquo;Test Release&rdquo; deployment goes
+    into the main database (thus mark your tests clearly as &ldquo;TESTS&rdquo; to
+    facilitate data cleaning.</p>
+</li>
+<li>
+<p><strong>Live Release</strong> &ndash; When instruments/forms are final, or instrument
+    edits have been tested, use this release option (&ldquo;release to
+    production&rdquo;). In this case, tablets that are already collecting
+    data, or have the group&rsquo;s apk installed, will received an update
+    request when connecting to the Internet the next time. All data
+    collected from this release will also be added to the main database.</p>
+</li>
+</ol>
+<p>Tangerine also offers two deployment /installation strategies, Android
+installation or web browser installation:</p>
+<ul>
+<li>
+<p><strong>Android Installation</strong>. This is the standard deployment package
+    where an actual apk file can be generated on the computer,
+    downloaded, and then copied over to a mobile device via a USB cable
+    and installed. This method of deployment is suitable in slow network
+    environment or when the apk is large.</p>
+</li>
+<li>
+<p><strong>Web Browser Installation</strong>. This deployment strategy requires an
+    Internet connection on the tablet for the Tangerine to be installed.
+    Once installed, the app can work again offline. This method is
+    suitable in places of good connectivity.</p>
+</li>
+</ul>
+<p><strong>NOTE</strong>: We recommend thoroughly testing your instruments and its data
+output before releasing them!</p>
+<h2 id="android-installation">Android Installation</h2>
+<p>This deployment strategy creates an APK file which can be installed on
+an Android tablet or smartphone. Click on Android Installation Test
+Release/Live Release as shown in the screen above. <strong>Wait.</strong></p>
+<p><img alt="" src="../media/image77.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.6847222222222222in&rdquo;}</p>
+<p>Once Tangerine has compiled the apk, click on &ldquo;Download your APK here&rdquo;,
+as shown below. This will download an apk file into your computer&rsquo;s
+downloads folder.</p>
+<p><img alt="" src="../media/image78.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.508928258967629in&rdquo;}</p>
+<p><strong>NOTE:</strong> Every time an instrument/form is changed, added, or deleted
+from the group, it is necessary to create a release and alert each
+tablet user to use the &ldquo;Check for Update&rdquo; option in order to update
+their application.</p>
+<h2 id="web-browser-installation">Web Browser Installation</h2>
+<p>This deployment strategy creates a link/URL to a &ldquo;progressive web app&rdquo;
+(PWA) for direct installation from the web to the Android tablet or
+smartphone. Click on Web Browser Installation Test Release/Live Release.
+<strong>Wait.</strong></p>
+<p>Once Tangerine has compiled the PWA, it will show an installation URL
+like in the screen below.</p>
+<p><img alt="" src="../media/image79.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;0.7569444444444444in&rdquo;}</p>
+<p>Use this URL from the <strong>Chrome browser on the tablet</strong> to install the
+PWA on the tablet devices.</p>
+<p>You can also copy the URL and open a new browser tab with this URL on
+your computer to test your instruments online. The browser window may
+require you to confirm that you want to apply the updates.</p>
+<p><img alt="" src="../media/image80.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.9854166666666666in&rdquo;}</p>
+<p>After &ldquo;<strong>Click here to proceed</strong>&rdquo;, Tangerine will show an online data
+collection version of your instruments with a similar look and function
+as on a tablet/smartphone.</p>
+<p><img alt="" src="../media/image81.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.165277777777778in&rdquo;}</p>
+<p><img alt="" src="../media/image82.jpg" />{width=&rdquo;3.8993055555555554in&rdquo;
+height=&rdquo;2.464583333333333in&rdquo;}</p>
+<p><strong>NOTE</strong>: Every time an instrument/form is changed, added, or deleted
+from the group, it is necessary to release the apk/pwa again, but <strong>NO
+NEW INSTALLATION is necessary</strong> on the tablets. Instead, instruct
+Tangerine tablet users to connect their tablets, select their profile
+page (3 vertical white dots on top right of tablet screen).</p>
+<p>Select &ldquo;<strong>Check for Update</strong>&rdquo; and proceed to install the update.</p>
+<p><img alt="" src="../media/image83.png" />{width=&rdquo;2.0555555555555554in&rdquo;
+height=&rdquo;2.4929571303587053in&rdquo;}</p>
+<p><strong>NOTE:</strong> This update approach will not only apply any instrument/form
+edits, new forms, or form deletions, but also any <strong>updates to the
+Tangerine application</strong> made in the meantime and applied to your group
+(if any).</p>
+<h1 id="download-csv">Download CSV</h1>
+<p>As mentioned earlier, on the group&rsquo;s main page listing the
+instruments/forms for the group, Tangerine provides a download CSV
+function on the main Tangerine editor page.</p>
+<p><img alt="" src="../media/image84.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;2.047222222222222in&rdquo;}</p>
+<p>Click the download icon
+<img alt="" src="../media/image85.png" />{width=&rdquo;0.20402340332458443in&rdquo;
+height=&rdquo;0.21039916885389326in&rdquo;}to see the interface below. From here,
+you can select the results for a specific month or year of data
+collection.</p>
+<p><img alt="" src="../media/image86.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.8118055555555554in&rdquo;}</p>
+<p><strong>NOTE</strong>: To be able to download all the data select the * on both
+Month and Year and click the SUBMIT button.</p>
+<p>If the CSV generation was successful, the following screen will present
+the group name, Form id , Start time and progress of the CSV download.</p>
+<p><img alt="" src="../media/image87.png" />{width=&rdquo;6.263888888888889in&rdquo;
+height=&rdquo;1.2673611111111112in&rdquo;}</p>
+<p>Once the CSV has been created, you can find it in your Downloads folder.</p>
+<h1 id="10-using-tangerine-on-the-mobile-device">10. Using Tangerine on the Mobile Device</h1>
+<p><img alt="" src="../media/image88.png" />{width=&rdquo;2.6166666666666667in&rdquo;
+height=&rdquo;4.18125in&rdquo;}When using &ldquo;Android Installation&rdquo;, install the
+Tangerine apk upon moving it onto the tablet device. Make sure you have
+selected &ldquo;<strong>Unknown sources</strong>&rdquo; under <strong>Settings > Security</strong> to allow
+installation of apps from sources other than the Play Store.</p>
+<p>When using the &ldquo;Web Browser Installation&rdquo; strategy, enter the PWA URL
+generated above into the URL field of the Chrome browser. Upon start of
+the download process, you will be prompted about &ldquo;<strong>Adding Tangerine to
+Home screen</strong>&rdquo;. Confirm this with &ldquo;ADD&rdquo; on the next prompt.</p>
+<p>Close your browser and open Tangerine from your device&rsquo;s home screen or
+app drawer. Do not use the browser link anymore.</p>
+<h2 id="registration-and-log-in">Registration and Log in</h2>
+<p>Have users register on the tablet. This is only required once for each
+user on a given tablet.</p>
+<p><img alt="" src="../media/image89.png" />{width=&rdquo;2.1790551181102362in&rdquo;
+height=&rdquo;3.486487314085739in&rdquo;}</p>
+<p>Log in following registration.</p>
+<p><img alt="" src="../media/image90.png" />{width=&rdquo;2.9004844706911634in&rdquo;
+height=&rdquo;2.5479451006124236in&rdquo;}</p>
+<p>You should now see the main Tangerine screen with your group&rsquo;s
+instrument listed on the tablet.</p>
+<p><img alt="" src="../media/image91.png" />{width=&rdquo;2.6273687664041994in&rdquo;
+height=&rdquo;4.203790463692038in&rdquo;}</p>
+<p><strong>NOTE</strong>: Hitting the tangerine icon in the top left corner will return
+the user to Tangerine&rsquo;s home screen.</p>
+<h2 id="administrating-instruments">Administrating Instruments</h2>
+<p>Select the instrument to use, and follow the prompts, sections, and
+items on the screen, as generated in the instrument/form editor. To
+select an answer option, just tab on it.</p>
+<p><strong>NOTE</strong>: Different to all other inputs, where the user/assessor selects
+the applicable / correct response which will then be marked in blue, in
+grids, the user has to select all <strong>INCORRECT</strong> items (they will turn
+blue).</p>
+<p><img alt="" src="../media/image92.png" />{width=&rdquo;2.9583333333333335in&rdquo;
+height=&rdquo;4.739583333333333in&rdquo;}<img alt="" src="../media/image93.png" />{width=&rdquo;2.96in&rdquo;
+height=&rdquo;4.74in&rdquo;}</p>
+<h2 id="resuming-instrument">Resuming Instrument</h2>
+<p>Should an administration be interrupted, or to be completed at a later
+stage, navigate to &ldquo;<strong>Visits</strong>&rdquo; on the top of the tablet screen.</p>
+<p><strong>NOTE</strong>: You have to have a location section and location list loaded
+for your instrument to be able to access the resume feature in
+Tangerine. Make up a location list, even if it only has one column
+header entry and one item underneath (e.g. column A header is &ldquo;site&rdquo;,
+row 2 entry is &ldquo;test site&rdquo;. Without a location list loaded, you will not
+have a &ldquo;Visits&rdquo; tab on the tablet from which to resume the instrument.</p>
+<p><img alt="" src="../media/image94.png" />{width=&rdquo;3.451388888888889in&rdquo;
+height=&rdquo;3.0454549431321083in&rdquo;}</p>
+<p>Select the appropriate location and date (as applicable) from the menu.
+Tangerine will automatically return the user to the last, incomplete
+section/page of the instrument.</p>
+<p><img alt="" src="../media/image95.png" />{width=&rdquo;3.475693350831146in&rdquo;
+height=&rdquo;1.9696970691163604in&rdquo;}</p>
+<p>You can return from the &ldquo;Visits&rdquo; page to the main screen by hitting the
+Tangerine icon.</p>
+<h2 id="width20590277777777777in-height22743055555555554insyncing-data"><img alt="" src="../media/image83.png" />{width=&rdquo;2.0590277777777777in&rdquo; height=&rdquo;2.2743055555555554in&rdquo;}Syncing Data</h2>
+<p>Whenever possible during data collection, recommend that users /
+assessors to sync their data to the tablet by navigating to the profile
+menu, and select &ldquo;<strong>Sync</strong>&rdquo;.</p>
+<p>The Sync screen provides an overview of the data upload/sync status to
+date, including the number of responses not yet uploaded as shown below.</p>
+<p><img alt="" src="../media/image96.png" />{width=&rdquo;3.518662510936133in&rdquo;
+height=&rdquo;3.1515146544181976in&rdquo;}</p>
+<p>Once the sync is complete, Tangerine will show &ldquo;<strong>100%</strong>&rdquo; for the field
+&ldquo;<strong>Percentage uploaded</strong>&rdquo;.</p>
+<p><img alt="" src="../media/image97.png" />{width=&rdquo;3.45in&rdquo; height=&rdquo;3.1515146544181976in&rdquo;}</p>
+<h1 id="appendix-a">Appendix A</h1>
+<p>In this appendix we will show you how to do certain things that require
+more technical knowledge or experience with Tangerine</p>
+<h2 id="adding-an-auto-generated-id">Adding an auto-generated ID</h2>
+<p>An autogenerated student or teacher ID is something that you may need to
+add to each one of your instruments. In the example here I will show you
+how to add an ID field that is already populated upon opening the page.
+Here are the steps to set this up:</p>
+<ol>
+<li>
+<p>Create an input field of type TEXT and type in &lsquo;student_id&rsquo; as its
+    name. Mark this field as required and click save.</p>
+</li>
+<li>
+<p>Copy and paste the code that I have before into the on-open section
+    logic</p>
+</li>
+</ol>
+<p>Go the section where you&rsquo;d like to add a student id. This new field
+doesn&rsquo;t have to be in a separate section and can be part of the Student
+Information page.</p>
+<p>Click the Insert Here button, to add a new input, and select TEXT under
+the first Inputs column.</p>
+<p>On the next page under name type in <em>student_id</em></p>
+<p><img alt="" src="../media/image98.png" />{width=&rdquo;4.9875in&rdquo; height=&rdquo;2.281674321959755in&rdquo;}</p>
+<p>Add a label and any other information you&rsquo;d like for this field and save
+it.</p>
+<p>Now click the Edit icon on the top left of the section header</p>
+<p>Click the &lsquo;on-open&rsquo; text link to edit it and paste the below code inside
+the field:</p>
+<blockquote>
+<p><em>function makeid() {</em></p>
+<p><em>var text = '';</em></p>
+<p><em>var possible =
+'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz0123456789';</em></p>
+<p><em>//change 6 to the desired length of the ID</em></p>
+<p><em>for (var i = 0; i \&lt;= 6; i++)</em></p>
+<p><em>text += possible.charAt(Math.floor(Math.random() *
+possible.length));</em></p>
+<p><em>return text;</em></p>
+<p><em>}</em></p>
+<p><em>//If your variable is not called student_id change it in both
+occurances below</em></p>
+<p><em>if (inputs.student_id.value == '')</em></p>
+<p><em>inputs.student_id.value = makeid()</em></p>
+</blockquote>
+<p>You should see something like this on your screens</p>
+<p><img alt="" src="../media/image99.png" />{width=&rdquo;6.089588801399825in&rdquo; height=&rdquo;3.05in&rdquo;}</p>
+<p>Click the Submit button to save the change. If you deploy this form now
+you will see that upon opening this section the ID is generated and
+already inserted into the student_id variable.</p>
+<p>You can use this file to help you generated the code that you need:
+<a href="http://bit.ly/2JBk2P3">http://bit.ly/2JBk2P3</a></p>
+<h2 id="changing-the-label-of-an-input">Changing the label of an input</h2>
+<p>In some situations, you may wish to change the label of an input as to
+give different instruction or to add a variable name to it (like some
+calculation or the result of a previous selection). You can easily do
+this by following the below steps</p>
+<ol>
+<li>
+<p>Add the question that you wish to change</p>
+</li>
+<li>
+<p>Add code and/or calculations to change the label in the on-open
+    event of a section</p>
+</li>
+</ol>
+<p>Let&rsquo;s first add question with variable name Q_10. Now, let&rsquo;s assume
+that you want to change the label for this question based on some
+calculation, and we want to add the result of the calculation to the
+label. Go to the on-open event on the section containing Q_10. Add the
+below code and click Submit:</p>
+<blockquote>
+<p>var calc =
+getValue('teachers_present')/getValue('teachers_enrolled')</p>
+<p>inputs.Q_10.label = 'The teacher ratio is#' + calc + ' Please
+keep this in mind when answering the below question.'</p>
+</blockquote>
+<p>What am I doing above? First I calculate some ration of teachers present
+vs teacher enrolled, which I&rsquo;ve collected on a previous form. Then I
+make this ratio part of the label for questions Q_10.</p>
+<p>If you&rsquo;d like to only assign a certain label without calculating
+anything you can do this:</p>
+<blockquote>
+<p>inputs.Q_10.label = 'Previously you responded that there are #' +
+getValue('teachers_present') + ' teachers present. How many of
+them were prepared for class?'</p>
+</blockquote>
+<h2 id="filter-the-location-list-based-on-the-user-profiles-location">Filter the location list based on the user profile&rsquo;s location</h2>
+<p>Let&rsquo;s assume that you have a location list with levels Region, District,
+and School. Now let&rsquo;s also assume that on the user profile page, you
+have added a location input with levels Region and District. You have
+also asked each assessor to select their district on the user profile
+page, after they have logged in.</p>
+<p>Your user profile page looks like so:</p>
+<p><img alt="" src="../media/image100.png" />{width=&rdquo;4.0625in&rdquo; height=&rdquo;3.3806419510061243in&rdquo;}</p>
+<p>Note above how the levels defined for this location input are Region and
+District. On the actual assessment form your location levels include the
+full hierarchy, for example, Region, District, and School. There is one
+more option that I want to check here which is &ldquo;Filter by locations in
+the user profile&rdquo; In the assessment form make sure that your data is
+like the example below:</p>
+<p><img alt="" src="../media/image101.png" />{width=&rdquo;4.071112204724409in&rdquo;
+height=&rdquo;1.8368339895013124in&rdquo;}</p>
+<p>What will enabling the filter on the assessment form do? It will display
+only the district that this user has selected under their user profile.
+This makes the selection of a school much easier in a list with a lot of
+regions and districts. Let&rsquo;s see how it works on the tablet.</p>
+<p>When filling in my user profile I will select the &lsquo;Kilolo DC&rsquo; district</p>
+<p><img alt="" src="../media/image102.png" />{width=&rdquo;3.4875in&rdquo; height=&rdquo;4.340765529308836in&rdquo;}</p>
+<p>Now every time start a form containing a location input in it, I will
+only see the district that I selected on the user profile and no other
+regions or districts will be given to me for selection. By doing this,
+you ensure that the assessor will never select a school with the same
+name form a different district or make a selection that doesn&rsquo;t
+correspond to their actual location.</p>
+<p><img alt="" src="../media/image103.png" />{width=&rdquo;5.2in&rdquo; height=&rdquo;1.9103783902012248in&rdquo;}</p>
+<p>Note how in the above screenshot, there is only one district showing up.
+Under the region selection we also see only the region that the Kilolo
+DC district belongs to.</p>
+<h1 id="appendix-b">Appendix B</h1>
+<p>In this appendix we will link some video tutorials and helper files that
+you can use to have a live example on how to do certain things with
+Tangerine</p>
+<h2 id="how-to-create-new-users-and-add-them-to-a-group">How to create new users and add them to a group</h2>
+<p>See how to create a user and add them to a group.</p>
+<p><a href="https://youtu.be/_gYGC2_J2EU">https://youtu.be/_gYGC2_J2EU</a></p>
+<h2 id="importing-a-location-list">Importing a location list</h2>
+<p>Make sure that the column names in your Excel exactly match the levels
+define in Tangerine (Including any capital letters)</p>
+<p>The part about importing metadata for your location is optional. You do
+not have to define metadata if such is not used in your scenario</p>
+<p><a href="https://youtu.be/RSJmNu7ef3U">https://youtu.be/RSJmNu7ef3U</a></p>
+<h2 id="location-list-sample-file-with-ids">Location list sample file with IDs</h2>
+<p>In this file you will find out a sample location list with the IDs
+generated by Excel. You can use the formula for generating the Ids if
+your file does not contain such.</p>
+<p><a href="http://bit.ly/2WzcTnB">http://bit.ly/2WzcTnB</a></p>
+<h2 id="defining-a-meta-data-template-to-present-to-the-user-upon-selection">Defining a meta data template to present to the user upon selection</h2>
+<p>If you do decide to use metadata, you need the part below in order to
+display some/all of it to the data assessor. If you are not displaying
+this information to the tablet user it will still end up in your CSV
+file.</p>
+<p><a href="https://youtu.be/M83zFwtR-4A">https://youtu.be/M83zFwtR-4A</a></p>
+<p>Adapt the line below to fit yoru metadata and level information so that
+this is printed to the assessor</p>
+<p>\${node.level === '<strong>LEVEL_VARIABLE</strong>' ?` EMIS:
+\${node.<strong>META_DATA_VARIABLE</strong>}`:''}</p>
+<p>Replace the bold text with your corresponding level and meta data
+variable. Make sure you enable the metadata for the location input and
+paste this code as content.</p>
+<h2 id="add-an-other-specify-field-for-a-location-list">Add an &lsquo;Other, specify&rsquo; field for a location list</h2>
+<p>In this video we show you how you can add an &lsquo;Other&rsquo; field for a
+location list. To help you generate the code we also use another helper
+file for this.</p>
+<p><a href="https://youtu.be/obTQusAKeRM">https://youtu.be/obTQusAKeRM</a></p>
+<p>The helper file to generate the necessary code is located at
+<a href="http://bit.ly/2DLy3Xa">http://bit.ly/2DLy3Xa</a></p>
+<h2 id="generate-an-autogenerated-id-field">Generate an Autogenerated ID field</h2>
+<p>This helper file will help you generated the code for your autogenerated
+ID</p>
+<p><a href="http://bit.ly/2JBk2P3">http://bit.ly/2JBk2P3</a></p>
+<h2 id="automatically-fill-in-the-date-and-time-fields-in-a-section-with-the-current-date">Automatically fill in the date and time fields in a section with the current date</h2>
+<p>This helper file will help you generate the code required to
+automatically fill in the date and time fields located in the same
+section with the current date and time on the tablet. Hint: to prevent
+the user from changing these values you can mark the inputs as Disabled</p>
+<p><a href="http://bit.ly/2PSJbZC">http://bit.ly/2PSJbZC</a></p>
+<h2 id="add-a-two-variable-tablet-report">Add a two variable tablet report</h2>
+<p>You can make use of the helper file located at <a href="http://bit.ly/2Yi8PsF">http://bit.ly/2Yi8PsF</a>
+to generate the code for a two variable tablet report like in the image
+below. This report shows you the count of occurrence of the two
+variables per day</p>
+<p>Refer to the instructional video at <a href="https://youtu.be/ne5pZkWvjKY">https://youtu.be/ne5pZkWvjKY</a></p>
+<p><img alt="" src="../media/image104.png" />{width=&rdquo;5.810126859142607in&rdquo;
+height=&rdquo;2.8633639545056866in&rdquo;}</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../usingTangerine/" class="btn btn-neutral float-right" title="Using Tangerine outside of the box">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../skipLogic/" class="btn btn-neutral" title="skipLogic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../skipLogic/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../usingTangerine/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

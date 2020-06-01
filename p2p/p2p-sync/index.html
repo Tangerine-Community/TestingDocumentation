@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Using P2P Sync for Offline Data Transfer - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using P2P Sync for Offline Data Transfer";
+    var mkdocs_page_input_path = "p2p/p2p-sync.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Using P2P Sync for Offline Data Transfer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#accessing-the-p2p-feature">Accessing the P2P feature:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#discovery">Discovery</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#endpoints">Endpoints</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syncing-to-an-endpoint">Syncing to an Endpoint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#do-it-again">Do it again!</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>P2p &raquo;</li>
+        
+      
+    
+    <li>Using P2P Sync for Offline Data Transfer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/p2p/p2p-sync.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-p2p-sync-for-offline-data-transfer">Using P2P Sync for Offline Data Transfer</h1>
+<p>Use the P2P sync feature to transfer data between two or more tablets without an Internet connection.</p>
+<p>Note: The tablets must be running Android 8 (Oreo) to use this function. </p>
+<p>In the following example, your tablet will be syncing data from your tablet to two other peers&rsquo; tablets running Tangerine. The goal is to have the same data on all tablets. At the end of the process, data will be transferred from your tablet to the Internet.</p>
+<h2 id="accessing-the-p2p-feature">Accessing the P2P feature:</h2>
+<p>Each peer should select Sync from the menu.</p>
+<p><img alt="sync-p2p-menu" src="../images/sync-p2p-tangy-menu-sync.jpg" /> </p>
+<p>Click the P2P Sync tab.</p>
+<p><img alt="sync-p2p-menu" src="../images/sync-p2p-p2p-sync-page.jpg" /> </p>
+<h2 id="discovery">Discovery</h2>
+<p>Gather in a circle with your peers. You and your peers should click the Discovery button. It does not matter who clicks first. </p>
+<p><img alt="sync-p2p-page-discovery" src="../images/sync-p2p-discovery-button.jpg" /></p>
+<h2 id="endpoints">Endpoints</h2>
+<p>After a short time - a minute of two, the screen will show the device name, a list of available endpoints, and information about the data transfers in the Log. </p>
+<p>In the screenshot, your device name is highlighted in green (89678). The list of available endpoints - your peers&rsquo; tablet names - is highlighted in red. A log of diagnostic information is highlighted in blue.</p>
+<p>(Please note that the endpoint names are randomly generated. The names you see when using this feature will be different.)</p>
+<p><img alt="sync-p2p-discovery-endpoints-listed" src="../images/sync-p2p-discovery-endpoints-listed.jpg" /></p>
+<h2 id="syncing-to-an-endpoint">Syncing to an Endpoint</h2>
+<p>At this point in the process, your peers don&rsquo;t need to push any buttons; they only need to monitor the sync process for errors. Your tablet will be called the &ldquo;master&rdquo; tablet because it is controlling the sync operations. Once the &ldquo;master&rdquo; tablet has collected all of the data from the tablets, it can be connected to the Internet and upload all of this data to the server.</p>
+<p>Ask your peers which one has the tab at the top of the endpoints list marked &ldquo;35747 - Pending&rdquo;. Upon identifying that peer, ask them to pay attention to the screen. Now you may click &ldquo;35747 - Pending&rdquo; to initiate the data transfer. Notice how the endpoint button you click turns a darker shade of grey to indicate that it has been pressed.</p>
+<p><img alt="sync-p2p-endpoint-chosen" src="../images/sync-p2p-endpoint-chosen.jpg" /></p>
+<p>Your tablet will send its data to your peer&rsquo;s tablet and then your peer&rsquo;s tablet will send its data back to your tablet, as well as the data you just sent. It&rsquo;s a little redundant, but this is part of reaching &ldquo;eventual consistency&rdquo; for all of the tablets. </p>
+<p>Notice that more data is added to the Log as the connection is made between the tablets and data transfer is initiated:</p>
+<p><img alt="sync-p2p-transfer-log-1" src="../images/sync-p2p-transfer-log-1.jpg" /></p>
+<p>When the data transfer is complete, the endpoint list updates to show that you are ready to sync the next device (&ldquo;Done! Sync next device.&rdquo;).  </p>
+<p><img alt="sync-p2p-done-next" src="../images/sync-p2p-done-next.jpg" /></p>
+<p>Ask your peer if they received any error messages; if not, it is safe to proceed to the next peer&rsquo;s tablet. Ask the peer who has the tablet marked &ldquo;29726&rdquo; to be ready. Click the endpoint marked &ldquo;29726: Pending&rdquo;.</p>
+<p><img alt="sync-p2p-done-next" src="../images/sync-p2p-device-2-selected.jpg" /></p>
+<p>When the data transfer is complete, the endpoint list updates to show that you are ready to sync the next device (&ldquo;Done! Sync next device.&rdquo;). Ask your peer if they received any error messages. If none, great! Since you&rsquo;re at the end of the endpoints list, you are done with this first part.</p>
+<p><img alt="sync-p2p-all-complete" src="../images/sync-p2p-all-complete.jpg" /></p>
+<h2 id="do-it-again">Do it again!</h2>
+<p>When you synced data from your &ldquo;master&rdquo; tablet to the second tablet, it received data from the first tablet, which was transferred to the &ldquo;master&rdquo; when it was sync&rsquo;d. But the first tablet still needs to receive data from the second tablet. So, you will need to repeat this whole process, starting from the first tablet (35747) and then to the second (29726). (You actually don&rsquo;t need to sync again the final device sync&rsquo;d in the process (29726), but it is easier to explain this process as a simple round-robin.) </p>
+<p>It may be useful to confirm that any records created on other tablets has indeed been transferred. </p>
+<p>English:
+<img alt="sync-p2p-home-confirmation" src="../images/sync-p2p-home-confirmation.jpg" /></p>
+<p>French: 
+<img alt="sync-p2p-home-confirmation" src="../images/sync-p2p-home-confirmation-fr.jpg" /></p>
+<p>As mentioned earlier, once the sync process is complete (and you&rsquo;ve done it twice), you may conect the &ldquo;master&rdquo; to the Internet and transfer data to the server.</p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Each time you visit the P2P page, your device name will change. It is a randomly generated number.</li>
+<li>Errors are highlighted in pink. It is fine to ignore the error marked &ldquo;State set to CONNECTED but already in that state&rdquo;.  </li>
+</ul>
+<p><img alt="sync-p2p-error-message" src="../images/sync-p2p-error-message.jpg" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../system-administrator/" class="btn btn-neutral float-right" title="System Administrator Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../editor/local-content-development/" class="btn btn-neutral" title="Local content development"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../editor/local-content-development/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../system-administrator/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

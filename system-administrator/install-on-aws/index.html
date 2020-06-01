@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Installing Tangerine on AWS - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installing Tangerine on AWS";
+    var mkdocs_page_input_path = "system-administrator/install-on-aws.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../developer/viewing-forms-and-data/">Viewing Forms and Form Data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Installing Tangerine on AWS</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-the-aws-instance">Creating the AWS instance</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#security">Security</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#set-up-ssl">Set up SSL</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#login">Login</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-docker">Install Docker</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-tangerine">Install Tangerine</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-tangerine-in-browser">View Tangerine in browser</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>System administrator &raquo;</li>
+        
+      
+    
+    <li>Installing Tangerine on AWS</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/system-administrator/install-on-aws.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installing-tangerine-on-aws">Installing Tangerine on AWS</h1>
+<h2 id="creating-the-aws-instance">Creating the AWS instance</h2>
+<p>Login to AWS and Launch a new instance with Ubuntu 16.04 using a t2.medium server with 4 GiB memory. </p>
+<p>Volume should be larger than the 8GB default. 24GB would be useful.</p>
+<h3 id="security">Security</h3>
+<p>Make sure to assign a security group to your instance that allows you to access port 80 via a web browser and port 22 via ssh. </p>
+<ul>
+<li>HTTP: TCP 80  0.0.0.0/0</li>
+<li>SSH   TCP 22  0.0.0.0/0</li>
+</ul>
+<h2 id="set-up-ssl">Set up SSL</h2>
+<p>Prerequisites:
+- An SSL Certificate. If you don&rsquo;t yet have one, we recommend using AWS&rsquo;s Certificate Manager (found under &ldquo;Security, Identity, and Compliance&rdquo;).</p>
+<p>Create and Configure an Elastic Load Balancer (ELB):
+- Go to EC2, click &ldquo;Load Balancers&rdquo; in the left column, click &ldquo;Create Load Balancer&rdquo;, and then select &ldquo;Classic Load Balancer&rdquo;. 
+- Step 1: Define Load Balancer 
+  - Set a Load Balancer name to what you want.
+  - Set &ldquo;Load Balancer Protocol&rdquo; on the left most column to &ldquo;HTTPS&rdquo;.
+  - Set &ldquo;Instance Protocol&rdquo; in the third column to &ldquo;HTTP&rdquo;. 
+  - Click &ldquo;Add&rdquo;.
+  - In the new row set &ldquo;Load Balancer Protocol&rdquo; to &ldquo;HTTP&rdquo; and &ldquo;Instance Protocol&rdquo; to &ldquo;HTTP&rdquo;. 
+  - Click &ldquo;Next&rdquo;.
+- Step 2: Assign Security Groups
+  - Select &ldquo;Create a new security group&rdquo;.
+  - Set rules for <strong>both</strong> HTTP and HTTPS. If you only do HTTPS, anyone who goes to <code>http://yourdomain.com</code> will get an Access Denied message. Allow them to access the site with HTTP, the software will forward them to HTTPS automatically.<br />
+  - Click &ldquo;Next&rdquo;.
+- Step 3: Configure Security Settings
+  - If you have an SSL certificate, you can upload that here. Otherwise select &ldquo;Choose an existing certificate from AWS Certificate Manager (ACM)&rdquo;.
+  - If you have not requested a certificate for your domain yet, you will need to click &ldquo;Request a new certificate from ACM&rdquo; and follow those instructions before proceeding.
+- Step 4: Configure Health Check
+  - Ping Protocol: HTTP
+  - Ping Port: 80
+  - Ping Path: /app/tangerine/index.html
+  - Response Timeout: 5 seconds
+  - Interval: 10 seconds
+  - Unhealthy threshold: 10
+  - Healthy threshold: 2
+- Step 5: Add EC2 Instances
+  - Select the EC2 instance running Tangerine.
+- Step 6: Add Tags 
+  - No tags are required for Tangerine.
+- Step 7: Review
+  - If everything looks good, go ahead and create it!
+- Now proceed to your Load Balancers dashboard, click on your load balancer, click on the Instances tab, and now wait for your EC2 instance to be listed as &ldquo;InService&rdquo;. 
+- Configure your domain&rsquo;s DNS to point to this load balancer by clicking on the load balancer&rsquo;s Description tab and using the &ldquo;DNS name&rdquo; given to configure your Domain&rsquo;s DNS. </p>
+<h2 id="login">Login</h2>
+<p>Once your server is created, login with your key:</p>
+<pre><code> ssh -i ~/.ssh/iyour_key -l ubuntu &lt;your EC2 instance's IP address&gt;
+</code></pre>
+
+<h2 id="install-docker">Install Docker</h2>
+<p>Follow the instructions here: https://docs.docker.com/engine/installation/linux/ubuntulinux/</p>
+<h2 id="install-tangerine">Install Tangerine</h2>
+<p>Follow the instructions here: https://github.com/tangerine-community/tangerine#installation</p>
+<h2 id="view-tangerine-in-browser">View Tangerine in browser</h2>
+<p>You should now be able to view Tangerine in your web browser by pasting the ip address of your instance and log in with the credentials for user1 that you added to your <code>config.sh</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../integrate-group-with-github/" class="btn btn-neutral float-right" title="Integrate a group's content with a repository on Github">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="System Administrator Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../integrate-group-with-github/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

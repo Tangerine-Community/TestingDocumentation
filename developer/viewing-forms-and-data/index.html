@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Tangerine Community">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Viewing Forms and Form Data - Tangerine Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Viewing Forms and Form Data";
+    var mkdocs_page_input_path = "developer/viewing-forms-and-data.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/JavaScript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/TypeScript.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tangerine Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Tangerine Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">How to contribute documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Artwork</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../artwork/icons/">Icons for v3</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data collector</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-collector/">Data Collector Guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Developer</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Developer Guide Contents</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-deletions/">Deletions in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-docs/">Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cordova-plugin-development/">Cordova plugin development</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../debugging-reporting/">Debugging reporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../debugging_node_apps/">Debugging node apps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker-network-issues/">Docker Network Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../i18n-translation/">i18n/Translation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../load-testing/">Load testing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modules/">Tangy Modules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../supporting-custom-elements/">Supporting custom elements</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tangerine-globals/">Globals in Tangerine</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Viewing Forms and Form Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mapping-of-components-to-forms">Mapping of components to forms</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#helper-functions-already-in-components">Helper functions already in components</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing-your-templates">Testing your templates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debugging-templates">debugging templates</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Editor</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/">Editor Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-management-group/">Case Management Group (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/case-module-cookbook/">Case Module Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/class/">Class module</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/cookbook/">The Tangerine Form Editor's Cookbook</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/editor-guide/">Releasing updates to existing forms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/feature-two-way-sync/">Feature: Two Way Sync (experimental)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../editor/local-content-development/">Local content development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">P2p</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../p2p/p2p-sync/">Using P2P Sync for Offline Data Transfer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">System administrator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/">System Administrator Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/install-on-aws/">Installing Tangerine on AWS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/integrate-group-with-github/">Integrate a group's content with a repository on Github</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-protocol-2/">Sync Protocol 2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../system-administrator/sync-strategies/">Sync Strategies</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">Tangerine User Guide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/CreateNewForm/">CreateNewForm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/HTMLEditor/">HTMLEditor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/addingSectionsAndQuestions/">addingSectionsAndQuestions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/admin/">Admin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/createNewGroup/">createNewGroup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/csv/">Csv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/dataCollection/">dataCollection</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deployment/">Deployment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/editInstrument/">editInstrument</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/formDevelopment/">formDevelopment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/groupMangement/">groupMangement</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/hackingTangerine/">hackingTangerine</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/inputTypes/">inputTypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/onDevice/">onDevice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/skipLogic/">skipLogic</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/userGuide/">userGuide</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/usingTangerine/">Using Tangerine outside of the box</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/validation/">Validation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tangerine Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developer &raquo;</li>
+        
+      
+    
+    <li>Viewing Forms and Form Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Tangerine-Community/TestingDocumentation/edit/master/docs/developer/viewing-forms-and-data.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="viewing-forms-and-form-data">Viewing Forms and Form Data</h1>
+<p>Use TangyFormService to retrieve form definitions and response data:</p>
+<pre><code class="js">    this.formResponse = await this.tangyFormService.getResponse(this.eventForm.formResponseId)
+    const tangyFormMarkup = await this.tangyFormService.getFormMarkup(this.eventFormDefinition.formId)
+</code></pre>
+
+<p>But there are other ways of getting data out of Tangerine. First you need to see where you are getting data from.</p>
+<h2 id="mapping-of-components-to-forms">Mapping of components to forms</h2>
+<p>EventFormListItemComponent - listing of forms in an event
+CaseEventListItemComponent - listing of events (such as Followup ANC Visits) in a case.</p>
+<h2 id="helper-functions-already-in-components">Helper functions already in components</h2>
+<p>In the component for a list, helper functions may already expose the properties you need to populate a template. In EventFormListItemComponent, notice the variable exposed:</p>
+<pre><code class="js">    const response = await this.formService.getResponse(this.eventForm.formResponseId)
+    const getValue = (variableName) =&gt; {
+// more code inside getValue();
+      }, {})
+// snip
+    const caseInstance = this.case
+    const caseDefinition = this.caseDefinition
+    const caseEventDefinition = this.caseEventDefinition
+    const caseEvent = this.caseEvent
+    const eventForm = this.eventForm
+    const eventFormDefinition = this.eventFormDefinition
+    const formatDate = (unixTimeInMilliseconds, format) =&gt; moment(new Date(unixTimeInMilliseconds)).format(format)
+    const TRANSLATE = _TRANSLATE
+    eval(`this.renderedTemplateListItemIcon = this.caseDefinition.templateEventFormListItemIcon ? \`${this.caseDefinition.templateEventFormListItemIcon}\` : \`${this.defaultTemplateListItemIcon}\``)
+    eval(`this.renderedTemplateListItemPrimary = this.caseDefinition.templateEventFormListItemPrimary ? \`${this.caseDefinition.templateEventFormListItemPrimary}\` : \`${this.defaultTemplateListItemPrimary}\``)
+    eval(`this.renderedTemplateListItemSecondary = this.caseDefinition.templateEventFormListItemSecondary ? \`${this.caseDefinition. v}\` : \`${this.defaultTemplateListItemSecondary}\``)
+</code></pre>
+
+<p>If there is not a response for a form, response will be false; therefore, if you do a getValue() in your template, be sure to test if response is true. </p>
+<p>If you wish to display the startDatetime in your template, note that is is part of the response object - it is returned as response.startDatetime. In other cases - for values inside the form - use getValue(variableName) - but test if response is true first! Also, remember that the variableName is one of the id&rsquo;s in the inputs array, which is inside each item in the items array. </p>
+<h2 id="testing-your-templates">Testing your templates</h2>
+<p>Here&rsquo;s an easy way to test your template code: in the js console, use the copy() function to copy the value for your template:</p>
+<pre><code class="js">copy(this.caseDefinition.templateEventFormListItemSecondary)
+</code></pre>
+
+<p>Then add the fields or functions you need. In this case, I&rsquo;m adding a getValue:</p>
+<pre><code class="js">`&lt;t-lang en&gt;Status&lt;/t-lang&gt;&lt;t-lang fr&gt;Statut&lt;/t-lang&gt;: ${!eventForm.complete ? '&lt;t-lang en&gt;Incomplete&lt;/t-lang&gt;&lt;t-lang fr&gt;Incomplète&lt;/t-lang&gt;' : '&lt;t-lang en&gt;Complete&lt;/t-lang&gt;&lt;t-lang fr&gt;Achevée&lt;/t-lang&gt;'} ${response ? `Version: ${getValue(&quot;content_release_version&quot;)}`: ''}`
+</code></pre>
+
+<p>Output:</p>
+<pre><code class="js">&quot;&lt;t-lang en&gt;Status&lt;/t-lang&gt;&lt;t-lang fr&gt;Statut&lt;/t-lang&gt;: &lt;t-lang en&gt;Complete&lt;/t-lang&gt;&lt;t-lang fr&gt;Achevée&lt;/t-lang&gt; Start date: 3/13/2020, 11:25:19 AM&quot;
+</code></pre>
+
+<p>Note that I was testing for existence of response, and also nesting templates to show the &ldquo;Version&rdquo; text if there was a value for content_release_version.</p>
+<p>Another example:</p>
+<p><code>&lt;t-lang en&gt;Status&lt;/t-lang&gt;&lt;t-lang fr&gt;Statut&lt;/t-lang&gt;: ${!eventForm.complete ? '&lt;t-lang en&gt;Incomplete&lt;/t-lang&gt;&lt;t-lang fr&gt;Incomplète&lt;/t-lang&gt;' : '&lt;t-lang en&gt;Complete&lt;/t-lang&gt;&lt;t-lang fr&gt;Achevée&lt;/t-lang&gt;'} ${response ?</code>Start date: ${response.startDatetime}<code>: ''}</code></p>
+<h2 id="debugging-templates">debugging templates</h2>
+<p>To make the dev tool stop on a breakpoint in a Case Definition&rsquo;s template, add the following debugger statement to the content of the template.</p>
+<pre><code class="js">${(()=&gt;{debugger})()}
+</code></pre>
+
+<p><img alt="alt text" src="../assets/template-debugger.png" title="Template debugger" /></p>
+<p>When that template loads, the Chrome devtools will pause and you can inspect local variables/functions available and try running them in the console. Note that different templates will have different helper functions and variables available.</p>
+<p><img alt="alt text" src="../assets/inspect-helper-functions.png" title="Inspect Helper Functions" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../editor/" class="btn btn-neutral float-right" title="Editor Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tangerine-globals/" class="btn btn-neutral" title="Globals in Tangerine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Tangerine-Community/TestingDocumentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../tangerine-globals/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../editor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
