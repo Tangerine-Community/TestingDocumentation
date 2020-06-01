@@ -4,9 +4,9 @@ name: Build Documentation using MkDocs
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Master
-      uses: actions/checkout@v2
+      - name: Checkout Master
+        uses: actions/checkout@v2
 
-    - name: Build and Deploy Documentation using MkDocs
-      uses: Tangerine-Community/tangy-mkdocs-build-action@master
-
+      - name: Build and Deploy Documentation using MkDocs
+        uses: Tangerine-Community/tangy-mkdocs-build-action@master

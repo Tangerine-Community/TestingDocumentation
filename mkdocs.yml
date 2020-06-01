@@ -10,5 +10,6 @@ theme:
     - TypeScript
 plugins:
   - search
+  - git-revision-date-localized
 markdown_extensions:
   - smarty
